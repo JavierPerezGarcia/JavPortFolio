@@ -1,3 +1,5 @@
-## Bienvenido al Portfolio personal de Javier Pérez García
+## Welcome to Javier Pérez García's personal portfolio
+
+![JavPerDev Logo](/src/img/JavLogo.png "Logo de Javier Pérez García")
 
 
