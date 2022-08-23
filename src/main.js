@@ -4,7 +4,7 @@ const navAbout = document.querySelector(".nav-about");
 const navEducation = document.querySelector(".nav-education");
 const navSkills = document.querySelector(".nav-skills");
 const navHobbies = document.querySelector(".nav-hobbies");
-const navSettings = document.querySelector(".nav-settings");
+const navProjects = document.querySelector(".nav-projects");
 const navContact = document.querySelector(".nav-contact");
 
 //Cards elements
@@ -13,16 +13,26 @@ const about = document.querySelector(".card-about-me");
 const education = document.querySelector(".card-education");
 const skills = document.querySelector(".card-skills");
 const hobbies = document.querySelector(".card-hobbies");
-const settings = document.querySelector(".card-settings");
+const projects = document.querySelector(".card-projects");
 const contact = document.querySelector(".card-contact");
+const logo = document.querySelector(".card-logo");
+
+//a tags elements
+
+const mail = document.querySelector(".email");
+const linked = document.querySelector(".linkedin");
+const github = document.querySelector(".github");
 
 navAbout.addEventListener("click", openCardAbout);
 navEducation.addEventListener("click", openCardEducation);
 navSkills.addEventListener("click", openCardSkills);
 navHobbies.addEventListener("click", openCardHobbies)
-navSettings.addEventListener("click", openCardSettings);
+navProjects.addEventListener("click", openCardProjects);
 navContact.addEventListener("click", openCardContact);
 
+mail.addEventListener("click", openCardContact);
+linked.addEventListener("click", openCardContact);
+github.addEventListener("click", openCardContact);
 
 const cards = document.querySelectorAll('.card');
 
@@ -32,8 +42,6 @@ function transition() {
   this.classList.toggle('active');
 }
 
-
-
 //Functions for flip the cards
 
 function openCardAbout() {
@@ -42,6 +50,7 @@ function openCardAbout() {
 
 function openCardEducation() {
   education.classList.toggle('active');
+  /* verifyActive(); */
 }
 
 function openCardSkills() {
@@ -52,10 +61,14 @@ function openCardHobbies() {
   hobbies.classList.toggle('active');
 }
 
-function openCardSettings() {
-  settings.classList.toggle('active');
+function openCardProjects() {
+  projects.classList.toggle('active');
 }
 
 function openCardContact() {
   contact.classList.toggle('active');
+}
+
+function openCardLogo() {
+  logo.classList.toggle('active');
 }

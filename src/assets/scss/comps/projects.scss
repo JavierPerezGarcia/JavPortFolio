@@ -1,0 +1,91 @@
+@use '../mixins/mixins.scss' as m;
+
+body {
+    #main {
+        .card-projects {
+            @include m.sizing(100%, 100%);
+            grid-column: 3 / 5;
+            grid-row: 4 / 5;
+
+
+            .projects {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #051A4C;
+                @include m.sizing(100%, 100%);
+                flex-direction: column;
+
+                h1 {
+                    display: none;
+                }
+
+                .icon-projects {
+                    width: 11rem;
+                    height: 11rem;
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            &:hover .icon-projects {
+                transform: scale(1.2);
+            }
+        }
+
+        .reverse-projects {
+            @include m.sizing(100%, 100%);
+            background-color: #9e9e9e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.5rem #051A4C solid;
+            box-sizing: border-box;
+            flex-direction: column;
+            background-color: white;
+
+            h1 {
+                color: #051A4C;
+            }
+
+            a,
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #051A4C;
+            }
+
+            a {
+                pointer-events: none;
+            }
+
+            p {
+                margin: 0rem;
+                padding: 0;
+            }
+
+            img {
+                width: 2.5rem;
+                margin: 0rem 1rem;
+            }
+
+            a:hover,
+            p:hover {
+                color: #F9458E;
+
+                img {
+                    filter: invert(58%) sepia(76%) saturate(5037%) hue-rotate(309deg) brightness(97%) contrast(101%);
+                }
+            }
+        }
+
+        .active {
+            a {
+                pointer-events: all;
+            }
+        }
+    }
+}

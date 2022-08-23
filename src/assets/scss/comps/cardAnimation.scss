@@ -1,0 +1,51 @@
+@use '../mixins/mixins.scss' as m;
+
+.flip {
+    position: relative;
+    cursor: pointer;
+
+    .front,
+    .back {
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: 1s;
+        transition-property: transform, opacity;
+        color: white;
+        border-radius: 0.4rem;
+    }
+
+    .back {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.active {
+    .front {
+        transform: rotateY(180deg);
+    }
+
+    .back {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.flip-vertical {
+    .back {
+        transform: rotateX(-180deg);
+    }
+}
+
+.active {
+    .front {
+        transform: rotateX(180deg);
+    }
+
+    .back {
+        transform: rotateX(0deg);
+    }
+}

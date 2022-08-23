@@ -7,55 +7,79 @@
     <meta name="description" content="Portfolio de presentación de Javier Pérez García, Desarrollador FrontEnd y Multiplataforma.">
     <title>Javier Pérez García - FrontEnd & Multiplatform Developer</title>
     <link rel="stylesheet" href="./index.scss">
+    <!-- <link rel="stylesheet" href="./assets/scss/queries/queryMobile415.scss"> -->
   </head>
   <body>
     <div id="main">
       <div class="card-hobbies card flip flip-vertical">
         <div class="hobbies card-side front">
           <img class="icon-hobbies" src="./svg/Hobbies.svg" alt="Logo de hobbies de Javier Pérez García">
-          <h1>HOBBIES</h1>
+          <h1>AFICIONES</h1>
         </div>
         <div class="reverse-hobbies card-side back">
           <div class="content-hobbies">
-            <h1>HOBBIES</h1>
-            <p>Me gusta salir a hacer vida “outside” ya que disfruto conectar con las personas en un entorno físico además de lo virtual, entre mis hobbies está el patinaje, la bicicleta, el deporte en general.</p>
+            <h1>AFICIONES</h1>
+            <p>Me gusta salir a hacer vida “outside” ya que disfruto conectar con las personas en un entorno físico además de lo virtual, entre mis hobbies está el patinaje, el baloncesto y el ocio en general.</p>
+            <div class="icons-hobbies">
+              <span class="iconify" data-icon="ic:twotone-skateboarding"></span>
+              <span class="iconify" data-icon="iconoir:basketball-alt"></span>
+              <span class="iconify" data-icon="icon-park-solid:headphone-sound"></span>
+            </div>
           </div>
-          <div class="photo-hobbies">
-
+          <div class="video-hobbies">
+            <video src="./video/javskate2.mp4" autoplay loop muted></video>
+            <div class="title-skate">
+              <h1 class="text-skate">SKATE</h1>
+            </div>
+          </div>
+          <div class="video-hobbies2">
+            <video src="./video/javskate2.mp4" autoplay loop muted></video>
+            <div class="title-basket">
+              <h1 class="text-basket">BASKET</h1>
+            </div>
+          </div>
+          <div class="video-hobbies3">
+            <video src="./video/javskate3.mp4" autoplay loop muted></video>
+            <div class="title-music">
+              <h1 class="text-music">MÚSICA</h1>
+            </div>
           </div>
         </div>
     </div>
       <div class="card-about-me card flip flip-vertical">
         <div class="about-me card-side front">
           <img class="icon-about" src="./svg/AboutMe4.svg" alt="Logo de Sobre Mi de Javier Pérez García">
-          <h1>ABOUT ME</h1>
+          <h1>SOBRE MÍ</h1>
         </div>
         <div class="reverse-about-me card-side back">
           <div class="content-about">
-            <h1>ABOUT ME</h1>
+            <h1>SOBRE MÍ</h1>
             <div class="text-about">
-              <p>Javier Pérez es un chico de 26 años.</p>
+              <p>Soy un joven de 26 años y vivo actualmente en Santa Cruz de Tenerife.</p>
               <p>Nunca tuve claro que quería hacer con mi vida, pero siempre tuve una vena creativa. Estudié informática y poco a poco me fui enamorando de ella. A día de hoy sé que me quiero dedicar al front dentro del sector tecnológico.</p>
             </div>
           </div>
-          <ul>
-            <!-- <li class="photo-about">
+          <div class="photo-about">
+            <img src="./img/javftv3.jpg" alt="">
+          </div>
+          <!-- <ul>
+            <li class="photo-about">
               <img src="./img/fotoCVnueva.png" alt="">
-            </li> -->
+            </li>
             <li class="photo-about2">
               <img src="./img/javBack.png" alt="">
             </li>
-          </ul>
+          </ul> -->
           <!-- <div class="photo-about"></div> -->
         </div>
       </div>
       <div class="card-skills card flip flip-vertical">
         <div class="skills card-side front">
           <img class="icon-skills" src="./svg/Skills.svg" alt="Logo de habilidades de Javier Pérez García">
-          <h1>SKILLS</h1>
+          <h1>HABILIDADES</h1>
         </div>
         <div class="reverse-skills card-side back">
-          <h1>SKILLS</h1>
+          <h1>HABILIDADES</h1>
           <div class="all-skills">
             <p class="html"><span class="iconify" data-icon="icomoon-free:html-five"></span>HTML</p>
             <p class="scss"><span class="iconify" data-icon="cib:sass"></span>SASS</p>
@@ -68,51 +92,57 @@
           </div>
         </div>
       </div>
-      <div class="logo">
-        <img class="icon-jav" src="./svg/JavLogoBlue650x400.svg" alt="Logo de Javier Pérez García">
+      <div class="card-logo card flip flip-vertical">
+        <div class="logo card-side front">
+          <div class="mask-logo"></div>
+        </div>
+        <!-- <img class="icon-jav" src="./svg/JavLogoBlue650x400.svg" alt="Logo de Javier Pérez García"> -->
+        <div class="reverse-logo card-side back">
+          <div class="name"><p>JAVIER PÉREZ GARCÍA</p></div>
+        </div>
       </div>
-      <div class="my-name"><p>JAVIER PÉREZ GARCÍA</p></div>
+      <!-- <div class="my-name"><p>JAVIER PÉREZ GARCÍA</p></div> -->
       <div class="navbar">
         <div class="nav-about nav">
-          <h1>ABOUT ME</h1>
+          <h1>SOBRE MÍ</h1>
         </div>
         <div class="nav-education nav">
-          <h1>EDUCATION</h1>
+          <h1>EDUCACIÓN</h1>
         </div>
         <div class="nav-skills nav">
-          <h1>SKILLS</h1>
+          <h1>HABILIDADES</h1>
         </div>
         <div class="nav-hobbies nav">
-          <h1>HOBBIES</h1>
+          <h1>AFICIONES</h1>
         </div>
-        <div class="nav-settings nav">
-          <h1>SETTINGS</h1>
+        <div class="nav-projects nav">
+          <h1>PROYECTOS</h1>
         </div>
         <div class="nav-contact nav">
-          <h1>CONTACT</h1>
+          <h1>CONTACTO</h1>
         </div>
       </div>
       <div class="card-contact card flip flip-vertical">
         <div class="contact card-side front">
           <img class="icon-contact" src="./svg/Contact.svg" alt="Logo de contacto de Javier Pérez García">
-          <h1>CONTACT</h1>
+          <h1>CONTACTO</h1>
         </div>
         <div class="reverse-contact card-side back">
-          <h1>CONTACT</h1>
+          <h1>CONTACTO</h1>
           <p><span class="iconify" data-icon="carbon:phone"></span>(+34) 647 868 172</p>
-          <p><span class="iconify" data-icon="ci:mail"></span>javipe96@gmail.com</p>
-          <a target="_blank" href="https://www.linkedin.com/in/javperdev/"><span class="iconify" data-icon="bi:linkedin"></span>Javier Pérez García</a>
-          <a target="_blank" href="https://github.com/JavierPerezGarcia"><span class="iconify" data-icon="icomoon-free:github"></span>JavPerDev</a>
+          <a class="email" target="_blank" href="mailto:pitayapp.eoi@gmail.com"><span class="iconify" data-icon="ci:mail"></span>javipe96@gmail.com</a>
+          <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/javperdev/"><span class="iconify" data-icon="bi:linkedin"></span>Javier Pérez García</a>
+          <a class="github" target="_blank" href="https://github.com/JavierPerezGarcia"><span class="iconify" data-icon="icomoon-free:github"></span>JavPerDev</a>
         </div>
       </div>
       <div class="card-education card flip flip-vertical">
         <div class="education card-side front">
           <img class="icon-education" src="./svg/EducationLeft.svg" alt="Logo de estudios de Javier Pérez García">
-          <h1>EDUCATION</h1>
+          <h1>EDUCACIÓN</h1>
         </div>
         <div class="reverse-education card-side back">
           <div class="content-education">
-            <h1>EDUCATION</h1>
+            <h1>EDUCACIÓN</h1>
             <p><span class="iconify" data-icon="ic:round-desktop-windows"></span>Ciclo en Desarrollo de Aplicaciones Web (CIFP César Manrique).</p>
             <p><span class="iconify multiplatform" data-icon="icomoon-free:mobile2"></span>Ciclo en Desarrollo de Aplicaciones Multiplataforma (CIFP César Manrique).</p>
             <p><span class="iconify" data-icon="la:laptop-code"></span> Cursos de FrontEnd y FullStack (Escuela de Organización Industrial).</p>
@@ -121,16 +151,20 @@
         </div>
       </div>
       <div class="photo"></div>
-      <div class="card-settings card flip flip-vertical">
-        <div class="settings card-side front">
-          <img class="icon-settings" src="./svg/Settings.svg" alt="Logo de configuración de Javier Pérez García">
-          <h1>SETTINGS</h1>
+      <div class="card-projects card flip flip-vertical">
+        <div class="projects card-side front">
+          <img class="icon-projects" src="./svg/Settings.svg" alt="Logo de configuración de Javier Pérez García">
+          <h1>PROYECTOS</h1>
         </div>
-        <div class="reverse-settings card-side back">
-          <h1>SETTINGS</h1>
+        <div class="reverse-projects card-side back">
+          <h1>PROYECTOS</h1>
+          <a class="pitayapp" target="_blank" href="https://pitayapp.com/"><img src="./svg/pitayappLogo.svg" alt="">Pitayapp.com</a>
+          <!-- <p><img src="./svg/omegalogo.svg" alt="">Omegalul (WIP)</p>
+          <p><img src="./svg/crytimeLogo.svg" alt=""> Crytime (WIP)</p> -->
+          <p>Future projects soon</p>
         </div>
       </div>
-      <div class="footer"><p>MADE BY JAV &copy 2022</p></div>
+      <div class="footer"><p>HECHO POR JAV &copy 2022</p></div>
     </div>
     <script type="module" src="./main.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
