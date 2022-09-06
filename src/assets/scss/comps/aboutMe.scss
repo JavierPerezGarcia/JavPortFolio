@@ -37,7 +37,7 @@ body {
 
         .reverse-about-me {
             @include m.sizing(100%, 100%);
-            background-color: #9e9e9e;
+            /* background-color: #9e9e9e; */
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -64,66 +64,122 @@ body {
 
                     p {
                         color: #051A4C;
-                        font-size: 1rem;
-                        line-height: 1.9rem;
+                        font-size: 0.9rem;
+                        line-height: 1.6rem;
                         text-align: justify;
-                        font-weight: 400;
+                        font-weight: 500;
                         margin-top: 0.5rem;
-                        padding: 0rem 1rem;
+                        padding: 0rem 1.5rem;
                     }
                 }
             }
 
             .photo-about {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @include m.sizing(45%, 100%);
+                @include m.sizing(45%, 85%);
+                //transform: translate(-50%, -50%);
+                transform-style: preserve-3d;
+                perspective: 3000px;
+                /* transition: .5s; */
+                /* pointer-events: none; */
 
-            }
+                /* .active2 .card-front {
+                    transform: rotateY(-180deg);
+                    pointer-events: all;
+                } */
 
-            img {
-                @include m.sizing(100%, 85%);
-                background-color: #051A4C;
-                box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
-                border-radius: 0.2rem;
-            }
+                /* .active2 {
+                    transform: rotateY(0deg);
+                } */
 
-            /* ul {
-                display: flex;
-                @include m.sizing(40%, 80%);
-                border: 0.2rem #051A4C solid;
-                padding: 0;
-                margin: 0;
-                border-radius: 0.4rem;
-                overflow: hidden;
-
-                li {
-                    list-style: none;
-                    @include m.sizing(100%, auto);
-
-                    
-
-                    //animation: changePhoto 8s infinite alternate linear;
+                &:hover .card-front {
+                    transform: rotateY(-180deg);
                 }
 
-                .photo-about {
+                &:hover .card-back {
+                    transform: rotateY(0deg);
+                }
+
+
+                .card-front {
                     @include m.sizing(100%, 100%);
-                    background-image: url(./img/fotoCVnueva.png);
-                    background-position: center;
+                    background-image: url(../../../img/javftv3.jpg);
                     background-repeat: no-repeat;
+                    background-position: center;
                     background-size: cover;
+                    background-color: #051A4C;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
+                    border-radius: 0.2rem;
+                    backface-visibility: hidden;
+                    transform: rotateY(0deg);
+                    transition: 1s;
+                    position: absolute;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+
+                    .acces-photo {
+                        .text-one {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            /* flex-direction: column; */
+                            background-color: rgba(5, 26, 76, 1);
+                            padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+                            border-radius: 0.3rem;
+                            margin: 0.5rem 0.5rem 0rem 0rem;
+
+                            svg {
+                                margin-right: 0.5rem;
+                                font-size: 2rem;
+                            }
+                        }
+                    }
                 }
 
-                .photo-about2 {
+                .card-back {
                     @include m.sizing(100%, 100%);
-                    background-image: url(./img/javBack.png);
-                    background-position: center;
+                    background-image: url(../../../img/javftv4.jpg);
                     background-repeat: no-repeat;
+                    background-position: center;
                     background-size: cover;
-                    //border: 0.2rem #051A4C solid;
+                    background-color: #051A4C;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
+                    border-radius: 0.2rem;
+                    backface-visibility: hidden;
+                    transform: rotateY(180deg);
+                    transition: 1s;
+                    position: absolute;
+
+                    .acces-photo2 {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        .text-two {
+                            display: flex;
+                            align-items: center;
+                            /* flex-direction: column; */
+                            background-color: rgba(5, 26, 76, 1);
+                            padding: 0.4rem 0.5rem 0.2rem 0.4rem;
+                            margin: 0.5rem 0.5rem 0rem 0rem;
+                            border-radius: 0.3rem;
+
+                            svg {
+                                margin-right: 0.3rem;
+                                /* margin: 0rem 0.3rem 0rem 0.5rem; */
+                                font-size: 1.7rem;
+                            }
+                        }
+                    }
                 }
-            } */
+
+                /* img {
+                    @include m.sizing(100%, 85%);
+                    background-color: #051A4C;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
+                    border-radius: 0.2rem;
+                } */
+            }
 
             .video-hobbies {
                 @include m.sizing(30%, 100%);
@@ -156,5 +212,13 @@ body {
                 }
             }
         }
+
+        /* .active {
+            .reverse-about-me {
+                .photo-about {
+                    pointer-events: auto;
+                }
+            }
+        } */
     }
 }

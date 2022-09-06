@@ -6,6 +6,7 @@
 @forward '../src/assets/scss/comps/contact.scss';
 @forward '../src/assets/scss/comps/education.scss';
 @forward '../src/assets/scss/comps/projects.scss';
+@forward '../src/assets/scss/comps/navbar.scss';
 @use '../src/assets/scss/mixins/mixins.scss' as m;
 
 body {
@@ -45,7 +46,7 @@ body {
                     mask: url(./svg/JavLogoBlue650x400.svg) no-repeat center;
                     background-color: #051A4C;
                     @include m.sizing(100%, 100%);
-                    transition: .5s ease-in;
+                    transition: .4s ease-in;
                 }
             }
 
@@ -65,7 +66,7 @@ body {
                 .logo {
                     .mask-logo {
                         background-color: #6f4100;
-                        transition: .5s ease-in;
+                        transition: .4s ease-in;
                     }
                 }
 
@@ -120,11 +121,11 @@ body {
             }
         }
 
-        /* .my-name {
+        .click-me {
             display: none;
-        } */
+        }
 
-        .navbar {
+        /* .navbar {
             @include m.sizing(100%, 100%);
             grid-column: 1 / 5;
             grid-row: 3 / 4;
@@ -142,7 +143,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                transition: background-image 0.6s linear;
+                transition: background-image 0.2s linear;
                 //background-color: #BFA174;
                 background-image: url(./svg/fondoNavbar.svg);
                 background-repeat: no-repeat;
@@ -154,17 +155,25 @@ body {
                     color: white;
                     margin: 0;
                     padding: 1rem;
+                    user-select: none;
                 }
             }
 
             .nav:hover {
-                /* background-color: #051A4C; */
-                background-image: url(./svg/hoverNavBar4.svg);
+                //background-color: #051A4C;
+                background-image: url(./svg/hoverNavBarBlue.svg);
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: 13rem;
+                background-size: 11rem;
             }
-        }
+
+            .active {
+                background-image: url(./svg/hoverNavBarBlue.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 11rem;
+            }
+        } */
 
         .photo {
             display: none;
@@ -176,7 +185,7 @@ body {
     }
 }
 
-@media (max-width: 1367px) {
+@media (max-width: 1441px) {
     body {
 
         #main {
@@ -185,47 +194,198 @@ body {
             @include m.sizing(100vw, 100vh);
             display: grid;
             gap: 0.6rem;
-            grid-template-columns: 2.1fr 0.4fr 0.4fr 2.1fr;
-            grid-template-rows: 2fr 1fr 0.5fr 1.5fr;
+            grid-template-columns: 1.5fr 0.9fr 2.6fr;
+            grid-template-rows: 2fr 0.5fr 0.5fr 1.3fr 0.8fr;
 
             .card-hobbies {
                 @include m.sizing(100%, 100%);
-                grid-column: 1 / 3;
+                grid-column: 2 / 4;
                 grid-row: 1 / 2;
 
                 .hobbies {
                     background-color: #FF9B2F;
+
+                    .clicking {
+                        width: auto;
+                        /* height: 3rem; */
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        position: absolute;
+                        left: auto;
+                        top: 1rem;
+                        right: 1.1rem;
+                    }
+
+                    .icon-hobbies {
+                        width: 14rem;
+                        height: 14rem;
+                    }
+
+                    h1 {
+                        display: block;
+                        margin: 0.1rem 0.3rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        transition: transform 0.5s ease-in-out;
+                        color: #051A4C;
+                        transition: transform 0.5s ease-in-out;
+                    }
+                }
+
+                &:hover .title-hobbies {
+                    transform: scale(1.2) translate(0rem, 0.5rem);
                 }
             }
 
+            /* .reverse-hobbies {
+                .video-hobbies {
+                    .title-skate {
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
+                .video-hobbies2 {
+                    .title-basket {
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
+                .video-hobbies3 {
+                    .title-music {
+                        h1 {
+                            font-size: 1.8rem
+                        }
+                    }
+                }
+            } */
+
             .card-about-me {
                 @include m.sizing(100%, 100%);
-                grid-column: 3 / 5;
-                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
 
                 .about-me {
                     background-color: #051A4C;
+
+                    .icon-about {
+                        width: 16rem;
+                        height: 16rem;
+                    }
+
+                    h1 {
+                        display: block;
+                        margin: 1rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        transition: transform 0.5s ease-in-out;
+                        //color: #FF9B2F;
+                    }
+                }
+
+                &:hover .title-about {
+                    transform: scale(1.2) translate(0rem, 0.5rem);
+                }
+
+                .content-about {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    h1 {
+                        margin: 0.8rem 0rem 0rem 0rem;
+                        font-size: 2.2rem;
+                    }
+
+                    .text-about {
+                        p {
+                            font-size: 0.88rem;
+                            padding: 0rem 2.3rem;
+                            line-height: 1.8rem;
+                        }
+
+                        /* .second-about-part {
+                            display: none;
+                        } */
+
+                        /* .last-about-part {
+                            display: none;
+                        } */
+                    }
+                }
+
+                .photo-about {
+                    display: none;
                 }
             }
 
             .card-skills {
                 @include m.sizing(100%, 100%);
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
+                grid-column: 3 / 4;
+                grid-row: 2 / 4;
 
                 .skills {
                     background-color: #051A4C;
+                    display: flex;
+                    flex-direction: row;
+
+                    .icon-skills {
+                        width: 8.5rem;
+                        height: 8.5rem;
+                    }
+
+                    h1 {
+                        display: block;
+                        margin: 0rem 0rem 0rem 1.5rem;
+                        font-size: 1.7rem;
+                        /* color: #051A4C; */
+                        transition: transform 0.5s ease-in-out;
+                    }
+                }
+
+                &:hover .title-skills {
+                    transform: scale(1.2) translate(1.5rem, 0rem);
                 }
             }
 
-            .logo {
+            .reverse-skills {
+                .all-skills {
+                    p {
+                        color: #051A4C;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 0;
+                        font-weight: 500;
+                    }
+
+                    svg {
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .card-logo {
                 @include m.sizing(100%, 100%);
-                background-color: #F0E0BC;
-                grid-column: 2 / 4;
-                grid-row: 2 / 3;
+                /* background-color: #F0E0BC; */
+                grid-column: 2 / 3;
+                grid-row: 2 / 4;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                .name {
+                    p {
+                        font-size: 2.4rem;
+                        line-height: 3.3rem;
+                    }
+                }
             }
 
             .navbar {
@@ -234,148 +394,225 @@ body {
 
             .card-contact {
                 @include m.sizing(100%, 100%);
-                grid-column: 4 / 5;
-                grid-row: 2 / 4;
+                grid-column: 1 / 2;
+                grid-row: 4 / 6;
 
                 .contact {
                     background-color: #FF9B2F;
+
+                    .icon-contact {
+                        width: 14rem;
+                        height: 14rem;
+                    }
+
+                    h1 {
+                        display: block;
+                        margin: 0rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        color: #051A4C;
+                        transition: transform 0.5s ease-in-out;
+                    }
+                }
+
+                &:hover .title-contact {
+                    transform: scale(1.2) translate(0rem, 0.3rem);
+                }
+            }
+
+            .reverse-contact {
+                box-sizing: border-box;
+                @include m.sizing(100%, 100%);
+                //background-color: #9e9e9e;
+                background-color: white;
+                border: 0.5rem #FF9B2F solid;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+
+                .content-contact {
+                    display: flex;
+
                 }
             }
 
             .card-education {
                 @include m.sizing(100%, 100%);
-                grid-column: 1 / 2;
-                grid-row: 3 / 5;
+                grid-column: 3 / 4;
+                grid-row: 4 / 5;
 
                 .education {
                     background-color: #FF9B2F;
+                    display: flex;
+                    flex-direction: row;
+
+                    .icon-education {
+                        width: 15rem;
+                        height: 9rem;
+                    }
+
+                    h1 {
+                        display: block;
+                        margin: 0rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        color: #051A4C;
+                        transition: transform 0.5s ease-in-out;
+                    }
+                }
+
+                &:hover .title-education {
+                    transform: scale(1.2) translate(1.5rem, 0rem);
+                }
+            }
+
+            .reverse-education {
+                @include m.sizing(100%, 100%);
+                background-color: #9e9e9e;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border: 0.5rem #FF9B2F solid;
+                box-sizing: border-box;
+                /* column-gap: 0.5rem; */
+
+                .content-education {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-left: 0rem;
+
+                    h1 {
+                        color: #FF9B2F;
+                        font-size: 2.2rem;
+                        margin: 0;
+                        margin-top: 0.7rem;
+                        text-align: center;
+                    }
+
+                    p {
+                        color: #FF9B2F;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 0.2rem;
+                        font-weight: 600;
+                    }
+
+                    svg {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        margin-right: 1rem;
+                    }
+
+                    p:hover {
+                        color: #051A4C;
+                    }
+                }
+
+                .photos-education {
+                    /* @include m.sizing(25%, 90%);
+                    background-image: url(./svg/vscPorAndroidStudio.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 10rem;
+                    margin-top: 0.5rem; */
+                    display: none;
                 }
             }
 
             .photo {
                 display: block;
                 @include m.sizing(100%, 100%);
-                grid-column: 2 / 4;
-                grid-row: 3 / 5;
+                grid-column: 2 / 3;
+                grid-row: 4 / 6;
                 background-image: url(./img/fotoCVnueva.png);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+                border-radius: 0.4rem;
             }
 
             .card-projects {
                 @include m.sizing(100%, 100%);
-                grid-column: 4 / 5;
-                grid-row: 4 / 5;
+                grid-column: 3 / 4;
+                grid-row: 5 / 6;
 
                 .projects {
                     background-color: #051A4C;
+                    display: flex;
+                    flex-direction: row;
+
+                    .icon-projects {
+                        width: 6.5rem;
+                        height: 6.5rem;
+                    }
+
+                    h1 {
+                        display: block;
+                        margin: 0rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        /* color: #051A4C; */
+                        transition: transform 0.5s ease-in-out;
+                    }
+                }
+
+                &:hover .title-projects {
+                    transform: scale(1.2) translate(1.5rem, 0rem);
+                }
+            }
+
+            .reverse-projects {
+
+                h1 {
+                    margin-top: 0.9rem;
+                }
+
+                .content-projects {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                    a,
+                    p {
+                        font-size: 1.1rem;
+
+                        img {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                    }
+
+                    .pitayapp {
+                        margin-right: 0rem;
+                    }
+
+                    .jav {
+                        margin-right: 0rem;
+                    }
+
+                    .future {
+
+                        svg {
+                            font-size: 1.5rem;
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 769px) {
     body {
-
         #main {
             box-sizing: border-box;
-            padding: 0.6rem;
             @include m.sizing(100vw, 100%);
             display: grid;
-            gap: 0.6rem;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 8rem 4rem 30rem 30rem 35rem 35rem 20rem 25rem 4rem;
-            //margin-bottom: 1rem;
-
-            .card {
-                border-radius: 0.4rem;
-            }
-
-            .logo {
-                @include m.sizing(100%, 100%);
-                background-color: #F0E0BC;
-                grid-column: 1 / 2;
-                grid-row: 1 / 2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .photo {
-                border-radius: 0.4rem;
-                display: block;
-                @include m.sizing(100%, 100%);
-                grid-column: 2 / 3;
-                grid-row: 1 / 3;
-                //background-color: #FF9B2F;
-                background-image: url(./img/fotoCVnueva.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-
-            .my-name {
-                display: flex;
-                align-items: center;
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-                background-color: #FF9B2F;
-                font-size: 1.4rem;
-                border-radius: 0.4rem;
-
-                p {
-                    text-align: center;
-                    margin: 0;
-                    color: white;
-                    font-weight: 800;
-                    font-size: 1.2rem;
-                    line-height: 1.6rem;
-                    margin-top: 0.15rem;
-                }
-            }
-
-            .card-about-me {
-                @include m.sizing(100%, 100%);
-                grid-column: 1 / 3;
-                grid-row: 3 / 4;
-
-                .about-me {
-                    background-color: #051A4C;
-
-                    h1 {
-                        display: block;
-                        margin: 0;
-                        font-size: 1.7rem;
-                        //color: #FF9B2F;
-                    }
-
-                    .icon-about {
-                        width: 15rem;
-                        height: 15rem;
-                    }
-                }
-
-                .reverse-about-me {
-                    display: flex;
-                    flex-direction: column;
-
-                    .content-about {
-                        @include m.sizing(80%, 80%);
-
-                        .text-about {
-                            p {
-                                font-size: 1rem;
-                            }
-                        }
-                    }
-
-                    ul {
-                        display: none;
-                    }
-                }
-            }
+            grid-template-columns: 1.55fr 0.45fr 0.45fr 1.55fr;
+            grid-template-rows: 31rem 7.5rem 12rem 37rem 3.5rem;
 
             .card-hobbies {
                 @include m.sizing(100%, 100%);
@@ -383,76 +620,308 @@ body {
                 grid-row: 4 / 5;
 
                 .hobbies {
-                    background-color: #FF9B2F;
-
-                    h1 {
-                        display: block;
-                        margin: 0;
-                        font-size: 1.7rem;
-                        color: #051A4C;
-                    }
-
                     .icon-hobbies {
-                        width: 13rem;
-                        height: 13rem;
+                        width: 10rem;
+                        height: 10rem;
                     }
                 }
             }
 
             .reverse-hobbies {
+
+                .content-hobbies {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
+                    //padding: 2rem;
+                    box-sizing: border-box;
+
+                    h1 {
+                        color: #FF9B2F;
+                        margin: 1rem 0rem 0rem 0rem;
+                    }
+
+                    .text-hobbies {
+                        color: #FF9B2F;
+                        margin: 0.5rem 0rem 0rem 0rem;
+                        padding: 0rem 2.79rem;
+                        line-height: 1.8rem;
+                        font-weight: 500;
+                    }
+
+                    .icons-hobbies {
+                        flex-direction: column;
+                        margin: 0rem;
+
+                        .first-icon-skate,
+                        .second-icon-basket,
+                        .third-icon-music {
+                            width: 70%;
+                            /* height: 20%; */
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 1rem 0rem;
+
+                            .tablet-text {
+                                display: block;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                            }
+
+                            .mobile-text {
+                                display: none;
+                            }
+                        }
+
+                        /* div:first-child {
+                            p {
+                                margin-right: 0.4rem;
+                            }
+                        } */
+
+                        div:nth-child(2) {
+                            p {
+                                margin-right: 0.9rem;
+                            }
+                        }
+
+                        div:last-child {
+                            p {
+                                margin-right: 0.25rem;
+                            }
+                        }
+                    }
+                }
+
+                .video-hobbies,
+                .video-hobbies2,
+                .video-hobbies3 {
+                    /* @include m.sizing(100%, 40%); */
+                    display: none;
+                }
+            }
+
+            .card-about-me {
+                @include m.sizing(100%, 100%);
+                grid-column: 3 / 5;
+                grid-row: 4 / 5;
+
+                .about-me {
+                    .icon-about {
+                        width: 11rem;
+                        height: 11rem;
+                    }
+                }
+            }
+
+            .reverse-about-me {
+
+                .content-about {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    h1 {
+                        margin: 0.8rem 0rem 0rem 0rem;
+                        font-size: 2.2rem;
+                    }
+
+                    .text-about {
+                        p {
+                            font-size: 0.88rem;
+                            padding: 0rem 2.7rem;
+                            line-height: 1.8rem;
+                        }
+
+                        /* .second-about-part {
+                            display: none;
+                        } */
+
+                        /* .last-about-part {
+                            display: none;
+                        } */
+                    }
+                }
+
+                .photo-about {
+                    display: none;
+                }
+            }
+
+            .card-projects {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 2;
+                grid-row: 2 / 4;
+
+                .projects {
+                    .icon-projects {
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                }
+
+                .reverse-projects {
+
+                    p,
+                    a {
+                        font-size: 1.15rem;
+                    }
+
+                    .future {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+
+
+            .card-logo {
+                @include m.sizing(100%, 100%);
+                grid-column: 2 / 4;
+                grid-row: 2 / 3;
+            }
+
+            .reverse-logo {
+
+                .name {
+
+                    p {
+                        width: 100%;
+                        margin: 0.25rem 0rem 0rem 0rem;
+                        text-align: center;
+                        color: #6f4100;
+                        font-weight: 700;
+                        line-height: 2.1rem;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            .photo {
+                @include m.sizing(100%, 100%);
+                grid-column: 2 / 4;
+                grid-row: 3 / 4;
+                border-radius: 0.4rem;
+            }
+
+            .card-contact {
+                @include m.sizing(100%, 100%);
+                grid-column: 4 / 5;
+                grid-row: 2 / 4;
+
+                .contact {
+                    .icon-contact {
+                        width: 12rem;
+                        height: 12rem;
+                    }
+                }
+            }
+
+            .reverse-contact {
+                h1 {
+                    font-size: 2.2rem;
+                }
+
+                a,
+                p {
+                    font-size: 1rem;
+
+                    svg {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+
+            .card-education {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+
+                .education {
+                    .icon-education {
+                        width: 14rem;
+                        height: 9rem;
+                    }
+                }
+            }
+
+            .reverse-education {
                 @include m.sizing(100%, 100%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                gap: 0.5rem;
 
-                .content-hobbies {
-                    @include m.sizing(100%, 60%);
+                .content-education {
+                    @include m.sizing(88%, 70%);
                     display: flex;
+                    flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
-                    flex-direction: column;
-                    padding: 2rem;
-                    box-sizing: border-box;
+                    margin-left: 0rem;
 
                     h1 {
-                        color: #FF9B2F;
-                        margin: 0;
+                        margin: 0rem 0rem 0.6rem 0rem;
+                        font-size: 2rem;
                     }
 
                     p {
                         color: #FF9B2F;
-                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.05rem;
+                        margin: 0.2rem;
+                        font-weight: 500;
+                    }
+
+                    svg {
+                        width: 5rem;
+                        height: 5rem;
+                        margin-right: 1.5rem;
+                    }
+
+                    .multiplatform {
+                        margin-left: 0.2rem;
+                    }
+
+                    p:hover {
+                        color: #051A4C;
                     }
                 }
 
-                .photo-hobbies {
-                    @include m.sizing(100%, 40%);
+                .photos-education {
+                    @include m.sizing(90%, 20%);
+                    background-image: url(./svg/vscAndroidNetbeans.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 18rem;
+                    margin-top: 0rem;
                 }
             }
 
             .card-skills {
                 @include m.sizing(100%, 100%);
-                grid-column: 1 / 3;
-                grid-row: 5 / 6;
+                grid-column: 3 / 5;
+                grid-row: 1 / 2;
 
                 .skills {
-                    background-color: #051A4C;
-
-                    h1 {
-                        display: block;
-                        margin: 0;
-                        font-size: 1.7rem;
-                    }
-
                     .icon-skills {
-                        width: 12rem;
-                        height: 12rem;
+                        width: 9rem;
+                        height: 9rem;
                     }
                 }
+            }
 
+            .reverse-skills {
                 h1 {
-                    margin-top: 1.5rem;
+                    font-size: 2rem;
+                    margin-top: 1rem;
                 }
 
                 .all-skills {
@@ -460,7 +929,7 @@ body {
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: repeat(4, 1fr);
                     width: 85%;
-                    height: 85%;
+                    height: 80%;
                     justify-content: center;
                     align-items: center;
 
@@ -503,6 +972,7 @@ body {
                     .bbdd {
                         grid-column: 2 / 3;
                         grid-row: 2 / 3;
+                        margin-right: 0rem;
                     }
 
                     .vuejs {
@@ -518,6 +988,7 @@ body {
                     .terminal {
                         grid-column: 1 / 2;
                         grid-row: 4 / 5;
+                        margin-right: 0rem;
                     }
 
                     .git {
@@ -527,9 +998,363 @@ body {
                 }
             }
 
+            .footer {
+                display: flex;
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 5;
+                grid-row: 5 / 6;
+                background-color: #F0E0BC;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.4rem;
+
+                p {
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                    color: #051A4C;
+                }
+
+                .part-two {
+                    margin-left: 0.4rem;
+                }
+            }
+
+            .click-me {
+                display: none;
+            }
+
+            .navbar {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 415px) {
+    body {
+
+        #main {
+            box-sizing: border-box;
+            padding: 0.6rem;
+            @include m.sizing(100vw, 100%);
+            display: grid;
+            gap: 0.6rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 8rem 4rem 40rem 38rem 34rem 35rem 22rem 25rem 4rem;
+            //margin-bottom: 1rem;
+
+            .card {
+                border-radius: 0.4rem;
+            }
+
+            .card-logo {
+                @include m.sizing(100%, 100%);
+                /* background-color: #F0E0BC; */
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .reverse-logo {
+
+                .name {
+
+                    p {
+                        width: 100%;
+                        margin: 0.25rem 0rem 0rem 0rem;
+                        text-align: center;
+                        color: #6f4100;
+                        font-weight: 700;
+                        line-height: 2.1rem;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            .photo {
+                border-radius: 0.4rem;
+                display: block;
+                @include m.sizing(100%, 100%);
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+                //background-color: #FF9B2F;
+                background-image: url(./img/fotoCVnueva.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .click-me {
+                display: flex;
+                align-items: center;
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                background-color: #FF9B2F;
+                font-size: 1.4rem;
+                border-radius: 0.4rem;
+
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    margin-top: 0.15rem;
+                }
+            }
+
+            .card-about-me {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 3 / 4;
+
+                .about-me {
+                    background-color: #051A4C;
+
+                    h1 {
+                        display: block;
+                        margin: 1rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        //color: #FF9B2F;
+                    }
+
+                    .icon-about {
+                        width: 15rem;
+                        height: 15rem;
+                    }
+                }
+
+                .reverse-about-me {
+                    display: flex;
+                    flex-direction: column;
+
+                    .content-about {
+                        @include m.sizing(100%, 100%);
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        h1 {
+                            margin: 0.8rem 0rem 0rem 0rem;
+                        }
+
+                        .text-about {
+                            p {
+                                font-size: 0.97rem;
+                                padding: 0rem 2.7rem;
+                                line-height: 1.8rem;
+                            }
+                        }
+                    }
+
+                    .photo-about {
+                        display: none;
+                    }
+                }
+            }
+
+            .card-hobbies {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 4 / 5;
+
+                .hobbies {
+                    background-color: #FF9B2F;
+
+                    h1 {
+                        display: block;
+                        margin: 0.5rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                        color: #051A4C;
+                    }
+
+                    .icon-hobbies {
+                        width: 13rem;
+                        height: 13rem;
+                    }
+                }
+            }
+
+            .reverse-hobbies {
+                @include m.sizing(100%, 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .content-hobbies {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
+                    //padding: 2rem;
+                    box-sizing: border-box;
+
+                    h1 {
+                        color: #FF9B2F;
+                        margin: 1rem 0rem 0rem 0rem;
+                    }
+
+                    .text-hobbies {
+                        color: #FF9B2F;
+                        margin: 0.5rem 0rem 0rem 0rem;
+                        padding: 0rem 3.14rem;
+                        line-height: 1.8rem;
+                        font-weight: 500;
+                    }
+
+                    .icons-hobbies {
+                        flex-direction: column;
+                        margin: 0rem;
+
+                        .first-icon-skate,
+                        .second-icon-basket,
+                        .third-icon-music {
+                            width: 50%;
+                            /* height: 20%; */
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 1rem 0rem;
+
+                            .mobile-text {
+                                display: block;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                            }
+
+                            .tablet-text {
+                                display: none;
+                            }
+                        }
+
+                        div:first-child {
+                            p {
+                                margin-right: 0.4rem;
+                            }
+                        }
+
+                        /* div:last-child {
+                            p {
+                                margin-right: 1.4rem;
+                            }
+                        } */
+                    }
+                }
+
+                .video-hobbies,
+                .video-hobbies2,
+                .video-hobbies3 {
+                    /* @include m.sizing(100%, 40%); */
+                    display: none;
+                }
+            }
+
+            .card-skills {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 5 / 6;
+
+                .skills {
+                    background-color: #051A4C;
+
+                    h1 {
+                        display: block;
+                        margin: 1rem 0rem 0rem 0rem;
+                        font-size: 1.7rem;
+                    }
+
+                    .icon-skills {
+                        width: 12rem;
+                        height: 12rem;
+                    }
+                }
+
+                h1 {
+                    margin-top: 1.5rem;
+                }
+            }
+
             .reverse-skills {
                 h1 {
                     font-size: 2rem;
+                }
+
+                .all-skills {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: repeat(4, 1fr);
+                    width: 85%;
+                    height: 80%;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        color: #051A4C;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 0;
+                        font-weight: 500;
+                    }
+
+                    svg {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                    }
+
+                    .html {
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 2;
+
+                    }
+
+                    .scss {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+                    }
+
+                    .javascript {
+                        grid-column: 1 / 2;
+                        grid-row: 2 / 3;
+
+                        svg {
+                            width: 1.8rem;
+                            height: 1.8rem;
+                        }
+                    }
+
+                    .bbdd {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                        margin-right: 0rem;
+                    }
+
+                    .vuejs {
+                        grid-column: 1 / 2;
+                        grid-row: 3 / 4;
+                    }
+
+                    .figma {
+                        grid-column: 2 / 3;
+                        grid-row: 3 / 4;
+                    }
+
+                    .terminal {
+                        grid-column: 1 / 2;
+                        grid-row: 4 / 5;
+                        margin-right: 0rem;
+                    }
+
+                    .git {
+                        grid-column: 2 / 3;
+                        grid-row: 4 / 5;
+                    }
                 }
             }
 
@@ -543,7 +1368,7 @@ body {
 
                     h1 {
                         display: block;
-                        margin: 0;
+                        margin: 1rem 0rem 0rem 0rem;
                         font-size: 1.7rem;
                         color: #051A4C;
                     }
@@ -568,6 +1393,8 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
+                    align-items: center;
+                    margin-left: 0rem;
 
                     h1 {
                         margin: 0rem 0rem 0.6rem 0rem;
@@ -578,9 +1405,9 @@ body {
                         color: #FF9B2F;
                         display: flex;
                         align-items: center;
-                        font-size: 1.2rem;
+                        font-size: 1.05rem;
                         margin: 0.2rem;
-                        font-weight: 400;
+                        font-weight: 500;
                     }
 
                     svg {
@@ -618,7 +1445,7 @@ body {
 
                     h1 {
                         display: block;
-                        margin: 0;
+                        margin: 1rem 0rem 0rem 0rem;
                         font-size: 1.7rem;
                         //color: #FF9B2F;
                     }
@@ -627,12 +1454,6 @@ body {
                         width: 13rem;
                         height: 13rem;
                     }
-                }
-            }
-
-            .reverse-contact {
-                h1 {
-                    font-size: 2rem;
                 }
             }
 
@@ -646,7 +1467,7 @@ body {
 
                     h1 {
                         display: block;
-                        margin: 0;
+                        margin: 1rem 0rem 0rem 0rem;
                         font-size: 1.7rem;
                         color: #051A4C;
                     }
@@ -655,6 +1476,17 @@ body {
                         width: 14rem;
                         height: 12rem;
                     }
+                }
+            }
+
+            .reverse-contact {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                p,
+                a {
+                    font-size: 1.2rem;
                 }
             }
 
@@ -673,10 +1505,47 @@ body {
                     font-size: 1.5rem;
                     color: #051A4C;
                 }
+
+                .part-two {
+                    display: none;
+                }
             }
 
             .navbar {
                 display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    body {
+
+        #main {
+
+            .card-about-me {
+
+                .reverse-about-me {
+
+                    .content-about {
+                        @include m.sizing(100%, 100%);
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        h1 {
+                            margin: 0.8rem 0rem 0rem 0rem;
+                        }
+
+                        .text-about {
+                            p {
+                                font-size: 0.88rem;
+                                padding: 0rem 2.7rem;
+                                line-height: 1.8rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

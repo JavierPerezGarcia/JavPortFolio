@@ -24,316 +24,473 @@ body {
                     height: 15rem;
                     transition: transform 0.5s ease-in-out;
                 }
+
+                .clicking {
+                    width: auto;
+                    /* height: 3rem; */
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    position: absolute;
+                    left: 1.1rem;
+                    top: 1rem;
+                    padding: 0.35rem 0.4rem 0.35rem 0.4rem;
+                    border-radius: 0.35rem;
+                    background-color: white;
+                    color: #051A4C;
+                    transition: background-color 0.5s ease-in-out;
+
+                    p {
+                        margin: 0;
+                        font-weight: 600;
+                        transition: color 0.5s ease-in-out;
+                    }
+
+                    svg {
+                        /* margin-left: 0.4rem; */
+                        width: 2rem;
+                        height: 2rem;
+                        color: #051A4C;
+                        transition: color 0.5s ease-in-out;
+                    }
+                }
             }
 
             &:hover .icon-hobbies {
                 transform: scale(1.2);
             }
-        }
 
-        .reverse-hobbies {
-            @include m.sizing(100%, 100%);
-            background-color: #9e9e9e;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            background-color: white;
-            border: 0.5rem #FF9B2F solid;
-            box-sizing: border-box;
+            &:hover {
+                .clicking {
+                    background-color: #051A4C;
 
-            .content-hobbies {
-                @include m.sizing(35%, 100%);
-                flex-direction: row;
+                    p {
+                        color: white;
+                    }
+
+                    svg {
+                        color: white;
+                    }
+                }
+            }
+
+            .reverse-hobbies {
+                @include m.sizing(100%, 100%);
+                background-color: #9e9e9e;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                flex-direction: column;
-                /* padding: 2rem; */
+                background-color: white;
+                border: 0.5rem #FF9B2F solid;
                 box-sizing: border-box;
 
-                h1 {
-                    color: #FF9B2F;
-                    margin: 1rem 0rem 0rem 0rem;
-                }
-
-                p {
-                    color: #FF9B2F;
-                    margin: 0;
-                    text-align: justify;
-                    line-height: 1.7rem;
-                    padding: 0rem 0.27rem;
-                    /* font-size: 1rem; */
-                }
-
-                .icons-hobbies {
-                    width: 100%;
+                .content-hobbies {
+                    @include m.sizing(35%, 100%);
+                    flex-direction: row;
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
-                    margin-bottom: 1rem;
+                    flex-direction: column;
+                    /* padding: 2rem; */
+                    box-sizing: border-box;
 
-                    svg {
-                        width: 4rem;
-                        height: 4rem;
+                    h1 {
                         color: #FF9B2F;
+                        margin: 1rem 0rem 0.5rem 0rem;
                     }
 
-                    svg:hover {
-                        color: #051A4C;
+                    p {
+                        color: #FF9B2F; //#D67813;
+                        margin: 0;
+                        text-align: justify;
+                        line-height: 1.7rem;
+                        padding: 0rem 0rem;
+                        font-weight: 600;
+                        font-size: 1rem;
                     }
 
-                    .iconify--ic:hover {
-                        animation: skating 2s linear infinite;
+                    .icons-hobbies {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        margin: 1rem 0.5rem;
+
+                        svg {
+                            width: 4rem;
+                            height: 4rem;
+                            color: #FF9B2F;
+                        }
+
+                        div:hover {
+
+                            svg,
+                            p {
+                                color: #051A4C;
+                            }
+                        }
+
+                        .iconify--ic {
+                            transition: color linear 2s;
+                            animation: skating-out 2s linear;
+                        }
+
+                        .iconify--ic:hover {
+                            animation: skating 2s linear infinite;
+                            color: #051A4C;
+                        }
+
+                        .iconify--iconoir {
+                            transition: color linear 1s;
+                            animation: rotating-out 1s linear;
+                        }
+
+                        .iconify--iconoir:hover {
+                            animation: rotating 1.5s linear infinite;
+                            color: #051A4C;
+                        }
+
+                        .iconify--icon-park-solid {
+                            transition: color linear 0.5s;
+                            animation: biglittle-out 0.5s linear;
+                        }
+
+                        .iconify--icon-park-solid:hover {
+                            animation: biglittle 1s linear infinite;
+                            color: #051A4C;
+                        }
+
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+
+                @keyframes rotating {
+                    0% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
                     }
 
-                    .iconify--iconoir:hover {
-                        animation: rotating 2.5s linear infinite;
+                    100% {
+                        -ms-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes rotating-out {
+                    0% {
+                        -ms-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
                     }
 
-                    .iconify--icon-park-solid:hover {
-                        animation: biglittle 1s linear infinite;
+                    100% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
                     }
                 }
-            }
 
-            @keyframes rotating {
-                0% {
-                    -ms-transform: rotate(0deg);
-                    -moz-transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
+                @keyframes skating {
+                    0% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+
+                    25% {
+                        -ms-transform: rotate(90deg);
+                        -moz-transform: rotate(90deg);
+                        -webkit-transform: rotate(90deg);
+                        -o-transform: rotate(90deg);
+                        transform: rotate(90deg);
+                    }
+
+                    50% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+
+                    75% {
+                        -ms-transform: rotate(-90deg);
+                        -moz-transform: rotate(-90deg);
+                        -webkit-transform: rotate(-90deg);
+                        -o-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
+                    }
+
+                    100% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
                 }
 
-                100% {
-                    -ms-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -webkit-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                }
-            }
+                @keyframes skating-out {
+                    0% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
 
-            @keyframes skating {
-                0% {
-                    -ms-transform: rotate(0deg);
-                    -moz-transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                }
+                    25% {
+                        -ms-transform: rotate(90deg);
+                        -moz-transform: rotate(90deg);
+                        -webkit-transform: rotate(90deg);
+                        -o-transform: rotate(90deg);
+                        transform: rotate(90deg);
+                    }
 
-                25% {
-                    -ms-transform: rotate(90deg);
-                    -moz-transform: rotate(90deg);
-                    -webkit-transform: rotate(90deg);
-                    -o-transform: rotate(90deg);
-                    transform: rotate(90deg);
-                }
+                    50% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
 
-                50% {
-                    -ms-transform: rotate(0deg);
-                    -moz-transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                }
+                    75% {
+                        -ms-transform: rotate(-90deg);
+                        -moz-transform: rotate(-90deg);
+                        -webkit-transform: rotate(-90deg);
+                        -o-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
+                    }
 
-                75% {
-                    -ms-transform: rotate(-90deg);
-                    -moz-transform: rotate(-90deg);
-                    -webkit-transform: rotate(-90deg);
-                    -o-transform: rotate(-90deg);
-                    transform: rotate(-90deg);
-                }
-
-                100% {
-                    -ms-transform: rotate(0deg);
-                    -moz-transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                }
-            }
-
-            @keyframes biglittle {
-                0% {
-                    -ms-transform: scale(1);
-                    -moz-transform: scale(1);
-                    -webkit-transform: scale(1);
-                    -o-transform: scale(1);
-                    transform: scale(1);
+                    100% {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
                 }
 
-                50% {
-                    -ms-transform: scale(1.3);
-                    -moz-transform: scale(1.3);
-                    -webkit-transform: scale(1.3);
-                    -o-transform: scale(1.3);
-                    transform: scale(1.3);
+                @keyframes biglittle {
+                    0% {
+                        -ms-transform: scale(1);
+                        -moz-transform: scale(1);
+                        -webkit-transform: scale(1);
+                        -o-transform: scale(1);
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        -ms-transform: scale(1.3);
+                        -moz-transform: scale(1.3);
+                        -webkit-transform: scale(1.3);
+                        -o-transform: scale(1.3);
+                        transform: scale(1.3);
+                    }
+
+                    100% {
+                        -ms-transform: scale(1);
+                        -moz-transform: scale(1);
+                        -webkit-transform: scale(1);
+                        -o-transform: scale(1);
+                        transform: scale(1);
+                    }
                 }
 
-                100% {
-                    -ms-transform: scale(1);
-                    -moz-transform: scale(1);
-                    -webkit-transform: scale(1);
-                    -o-transform: scale(1);
-                    transform: scale(1);
+                @keyframes biglittle-out {
+                    100% {
+                        -ms-transform: scale(1);
+                        -moz-transform: scale(1);
+                        -webkit-transform: scale(1);
+                        -o-transform: scale(1);
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        -ms-transform: scale(1.3);
+                        -moz-transform: scale(1.3);
+                        -webkit-transform: scale(1.3);
+                        -o-transform: scale(1.3);
+                        transform: scale(1.3);
+                    }
+
+                    0% {
+                        -ms-transform: scale(1);
+                        -moz-transform: scale(1);
+                        -webkit-transform: scale(1);
+                        -o-transform: scale(1);
+                        transform: scale(1);
+                    }
                 }
-            }
 
-
-
-            .video-hobbies {
-                @include m.sizing(auto, 80%);
-                display: flex;
-                position: relative;
-                /* margin-right: 2.5rem;
+                .video-hobbies {
+                    @include m.sizing(auto, 80%);
+                    display: flex;
+                    position: relative;
+                    /* margin-right: 2.5rem;
                 margin-left: 0.5rem; */
-                background-color: #FF9B2F;
-                box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
-                border-radius: 0.2rem;
-
-                video {
-                    /* width: 100%; */
-                    /* border: 0.25rem solid #FF9B2F; */
-
+                    background-color: #FF9B2F;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
                     border-radius: 0.2rem;
-                    display: flex;
-                    justify-content: end;
-                    align-items: flex-end;
-                    transition: transform 0.6s ease-in-out;
-                }
 
-                .title-skate {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
+                    video {
+                        width: 100%;
+                        /* border: 0.25rem solid #FF9B2F; */
 
-                    .text-skate {
-                        color: white;
-                        margin: 0.5rem;
+                        border-radius: 0.2rem;
+                        display: flex;
+                        justify-content: end;
+                        align-items: flex-end;
                         transition: transform 0.6s ease-in-out;
                     }
 
-                }
-            }
+                    .title-skate {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
 
-            .video-hobbies:hover {
+                        .text-skate {
+                            color: white;
+                            margin: 0.5rem;
+                            transition: transform 0.6s ease-in-out;
+                        }
 
-                background-color: #051A4C;
-                box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
-                transition: transform 0.6s ease-in-out;
-
-                video {
-                    box-shadow: 0rem #FF9B2F;
-                    transform: scale(0.92, 0.85) translate(0rem, -1rem);
-                }
-
-                .title-skate {
-                    .text-skate {
-                        transform: scale(0.8, 0.8) translate(0rem, 0.914rem);
                     }
                 }
-            }
 
-            .video-hobbies2 {
-                @include m.sizing(auto, 80%);
-                display: flex;
-                position: relative;
-                background-color: #FF9B2F;
-                box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
-                border-radius: 0.2rem;
+                .video-hobbies:hover {
 
-                video {
-                    width: 100%;
-                    border-radius: 0.2rem;
-                    transition: transform 0.5s ease-in-out;
+                    background-color: #6f4100;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #6f4100;
+                    /* transition: transform 0.6s ease-in-out; */
+
+                    video {
+                        box-shadow: 0rem #FF9B2F;
+                        transform: scale(0.92, 0.85) translate(0rem, -1rem);
+                    }
+
+                    .title-skate {
+                        .text-skate {
+                            transform: scale(0.8, 0.8) translate(0rem, 0.914rem);
+                        }
+                    }
                 }
 
-                video:hover {
-                    transform: scale(0.8);
-                }
-
-                .title-basket {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
+                .video-hobbies2 {
+                    @include m.sizing(auto, 80%);
                     display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
+                    position: relative;
+                    background-color: #FF9B2F;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
+                    border-radius: 0.2rem;
 
-                    .text-basket {
-                        color: white;
-                        margin: 0.5rem;
+                    video {
+                        width: 100%;
+                        border-radius: 0.2rem;
                         transition: transform 0.5s ease-in-out;
                     }
-                }
-            }
 
-            .video-hobbies2:hover {
+                    video:hover {
+                        transform: scale(0.8);
+                    }
 
-                background-color: #051A4C;
-                box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
+                    .title-basket {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
 
-                video {
-                    box-shadow: 0rem #FF9B2F;
-                    transform: scale(0.92, 0.85) translate(0rem, -1rem);
-                }
-
-                .title-basket {
-                    .text-basket {
-                        transform: scale(0.8, 0.8) translate(0rem, 0.914rem);
+                        .text-basket {
+                            color: white;
+                            margin: 0.5rem;
+                            transition: transform 0.5s ease-in-out;
+                        }
                     }
                 }
-            }
 
-            .video-hobbies3 {
-                @include m.sizing(auto, 80%);
-                display: flex;
-                position: relative;
-                background-color: #FF9B2F;
-                box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
-                border-radius: 0.2rem;
+                .video-hobbies2:hover {
 
-                video {
-                    width: 100%;
-                    border-radius: 0.2rem;
-                    transition: transform 0.5s ease-in-out;
+                    background-color: #051A4C;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
+
+                    video {
+                        box-shadow: 0rem #FF9B2F;
+                        transform: scale(0.92, 0.85) translate(0rem, -1rem);
+                    }
+
+                    .title-basket {
+                        .text-basket {
+                            transform: scale(0.8, 0.8) translate(0rem, 0.914rem);
+                        }
+                    }
                 }
 
-                .title-music {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
+                .video-hobbies3 {
+                    @include m.sizing(auto, 80%);
                     display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
+                    position: relative;
+                    background-color: #FF9B2F;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
+                    border-radius: 0.2rem;
+                    /* transition: background-color 0.5s ease-in-out;
+                transition: box-shadow 0.5s ease-in-out; */
 
-                    .text-music {
-                        color: white;
-                        margin: 0.5rem;
+                    video {
+                        width: 100%;
+                        border-radius: 0.2rem;
                         transition: transform 0.5s ease-in-out;
                     }
+
+                    .title-music {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+
+                        .text-music {
+                            color: white;
+                            margin: 0.5rem;
+                            transition: transform 0.5s ease-in-out;
+                        }
+                    }
                 }
-            }
 
-            .video-hobbies3:hover {
+                .video-hobbies3:hover {
 
-                background-color: #051A4C;
-                box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
+                    background-color: #BFA174; // #F0E0BC;
+                    box-shadow: 0rem 0rem 0rem 0.25rem #BFA174; // #F0E0BC;
 
-                video {
-                    box-shadow: 0rem #FF9B2F;
-                    transform: scale(0.92, 0.85) translate(0rem, -1rem);
-                }
+                    video {
+                        box-shadow: 0rem #FF9B2F;
+                        transform: scale(0.92, 0.85) translate(0rem, -1rem);
+                    }
 
-                .title-music {
-                    .text-music {
-                        transform: scale(0.8, 0.8) translate(0rem, 0.952rem);
+                    .title-music {
+                        .text-music {
+                            transform: scale(0.8, 0.8) translate(0rem, 0.952rem);
+                        }
                     }
                 }
             }

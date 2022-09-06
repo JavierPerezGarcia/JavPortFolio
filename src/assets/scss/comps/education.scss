@@ -41,12 +41,14 @@ body {
             background-color: white;
             border: 0.5rem #FF9B2F solid;
             box-sizing: border-box;
+            /* column-gap: 0.5rem; */
 
             .content-education {
                 @include m.sizing(70%, 100%);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
+                margin-left: 1.5rem;
 
                 h1 {
                     color: #FF9B2F;
@@ -60,9 +62,9 @@ body {
                     color: #FF9B2F;
                     display: flex;
                     align-items: center;
-                    font-size: 1.2rem;
+                    font-size: 1.13rem;
                     margin: 0.2rem;
-                    font-weight: 400;
+                    font-weight: 600;
                 }
 
                 svg {

@@ -48,20 +48,38 @@ body {
                 color: #FF9B2F;
             }
 
-            a,
-            p {
+            .content-contact {
+                @include m.sizing(100%, 65%);
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
-                gap: 1rem;
-                font-size: 1.3rem;
-                color: #FF9B2F;
-                text-decoration: none;
-                font-weight: 400;
+                flex-direction: column;
 
-                svg {
-                    width: 2.5rem;
-                    height: 2.5rem;
+                a,
+                p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 1.3rem;
+                    color: #FF9B2F;
+                    text-decoration: none;
+                    font-weight: 500;
+
+                    svg {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                a:hover,
+                p:hover {
+                    color: #051A4C;
                 }
             }
 
@@ -69,15 +87,6 @@ body {
                 pointer-events: none;
             }
 
-            p {
-                margin: 0;
-                padding: 0;
-            }
-
-            a:hover,
-            p:hover {
-                color: #051A4C;
-            }
         }
 
         .active {
