@@ -102,7 +102,7 @@ body {
 
                 .card-front {
                     @include m.sizing(100%, 100%);
-                    background-image: url(../../../img/javftv3.jpg);
+                    background-image: url(./../../../img/javftv3.jpg);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -138,7 +138,7 @@ body {
 
                 .card-back {
                     @include m.sizing(100%, 100%);
-                    background-image: url(../../../img/javftv4.jpg);
+                    background-image: url(./../../../img/javftv4.jpg);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
