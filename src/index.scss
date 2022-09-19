@@ -820,16 +820,16 @@ body {
                     }
                 }
 
-                .reverse-about-me {
+                /* .reverse-about-me {
                     .content-about {
                         .text-about {
-                            /* p {
+                            p {
                                 font-size: 0.8rem;
                                 line-height: 1.6rem;
-                            } */
+                            }
                         }
                     }
-                }
+                } */
             }
 
             .card-education {
@@ -902,22 +902,22 @@ body {
                 grid-column: 1 / 3;
                 grid-row: 6 / 7;
 
-                .reverse-skills {
+                /* .reverse-skills {
                     .all-skills {
-                        /* p {
+                        p {
                             font-size: 0.9rem;
-                        } */
+                        }
                     }
-                }
+                } */
             }
 
-            .navbar {
+            /* .navbar {
                 .nav {
-                    /* h1 {
+                    h1 {
                         font-size: 1.55rem;
-                    } */
+                    }
                 }
-            }
+            } */
 
             .card-projects {
                 grid-column: 1 / 2;
@@ -960,11 +960,11 @@ body {
                 grid-column: 3 / 4;
                 grid-row: 4 / 5;
 
-                .sign {
-                    /* p {
+                /* .sign {
+                    p {
                         font-size: 1.3rem;
-                    } */
-                }
+                    }
+                } */
 
                 .reverse-sign {
                     p {
