@@ -25,6 +25,10 @@ body {
                     height: 11rem;
                     transition: transform 0.5s ease-in-out;
                 }
+
+                .clicking2 {
+                    display: none;
+                }
             }
 
             &:hover .icon-education {

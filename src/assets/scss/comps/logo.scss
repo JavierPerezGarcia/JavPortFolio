@@ -1,0 +1,59 @@
+@use '../src/assets/scss/mixins/mixins.scss' as m;
+
+.card-logo {
+    @include m.sizing(100%, 100%);
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    .logo {
+        @include m.sizing(100%, 100%);
+        background-color: #F0E0BC;
+
+        .mask-logo {
+            -webkit-mask: url(./svg/JavLogoBlue650x400.svg) no-repeat center;
+            mask: url(./svg/JavLogoBlue650x400.svg) no-repeat center;
+            background-color: #051A4C;
+            @include m.sizing(100%, 100%);
+            transition: .4s ease-in;
+        }
+    }
+
+    &:hover {
+
+        .logo {
+            .mask-logo {
+                background-color: #6f4100;
+                transition: .4s ease-in;
+            }
+        }
+    }
+}
+
+.reverse-logo {
+    @include m.sizing(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 0.5rem #6f4100 solid;
+    box-sizing: border-box;
+
+    .name {
+        @include m.sizing(100%, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            color: #6f4100;
+            font-weight: 700;
+            line-height: 3.5rem;
+            font-size: 2.7rem;
+        }
+    }
+}

@@ -7,6 +7,7 @@
 @forward '../src/assets/scss/comps/education.scss';
 @forward '../src/assets/scss/comps/projects.scss';
 @forward '../src/assets/scss/comps/navbar.scss';
+@forward '../src/assets/scss/comps/logo.scss';
 @use '../src/assets/scss/mixins/mixins.scss' as m;
 
 body {
@@ -25,155 +26,9 @@ body {
         grid-template-columns: 2.1fr 0.7fr 0.1fr 0.9fr 1.2fr;
         grid-template-rows: 1.9fr 1.1fr 0.6fr 1.4fr;
 
-        .card-logo {
-            @include m.sizing(100%, 100%);
-            grid-column: 2 / 4;
-            grid-row: 2 / 3;
-            /* background-color: #F0E0BC; */
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            border-radius: 0.4rem;
-            /* transition: .6s ease; */
-            cursor: pointer;
-
-            .logo {
-                @include m.sizing(100%, 100%);
-                background-color: #F0E0BC;
-
-                .mask-logo {
-                    -webkit-mask: url(./svg/JavLogoBlue650x400.svg) no-repeat center;
-                    mask: url(./svg/JavLogoBlue650x400.svg) no-repeat center;
-                    background-color: #051A4C;
-                    @include m.sizing(100%, 100%);
-                    transition: .4s ease-in;
-                }
-            }
-
-            /* img {
-                @include m.sizing(90%, 90%);
-            } */
-
-            /* .name {
-                display: none;
-            } */
-
-            &:hover {
-
-                /* background-color: rgb(111, 65, 0); */
-                /* opacity: 0.8; */
-                /* transition: .8s ease-in; */
-                .logo {
-                    .mask-logo {
-                        background-color: #6f4100;
-                        transition: .4s ease-in;
-                    }
-                }
-
-                /* img {
-                    display: none;
-                    transition: .8s linear;
-                }
-
-                .name {
-                    @include m.sizing(100%, 100%);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    p {
-                        width: 70%;
-                        margin: 0;
-                        text-align: center;
-                        color: white;
-                        font-weight: 700;
-                        line-height: 3.5rem;
-                        font-size: 2.7rem;
-                    }
-                } */
-            }
-        }
-
-        .reverse-logo {
-            @include m.sizing(100%, 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            border: 0.5rem #6f4100 solid;
-            box-sizing: border-box;
-
-            .name {
-                @include m.sizing(100%, 100%);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                p {
-                    width: 70%;
-                    margin: 0;
-                    text-align: center;
-                    color: #6f4100;
-                    font-weight: 700;
-                    line-height: 3.5rem;
-                    font-size: 2.7rem;
-                }
-            }
-        }
-
         .click-me {
             display: none;
         }
-
-        /* .navbar {
-            @include m.sizing(100%, 100%);
-            grid-column: 1 / 5;
-            grid-row: 3 / 4;
-            background-color: #BFA174;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            border-radius: 0.4rem;
-
-            .nav {
-                cursor: pointer;
-                //width: 100%;
-                height: 100%;
-                //padding: 0rem 1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: background-image 0.2s linear;
-                //background-color: #BFA174;
-                background-image: url(./svg/fondoNavbar.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-
-                h1 {
-                    font-weight: 700;
-                    font-size: 1.8rem;
-                    color: white;
-                    margin: 0;
-                    padding: 1rem;
-                    user-select: none;
-                }
-            }
-
-            .nav:hover {
-                //background-color: #051A4C;
-                background-image: url(./svg/hoverNavBarBlue.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 11rem;
-            }
-
-            .active {
-                background-image: url(./svg/hoverNavBarBlue.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 11rem;
-            }
-        } */
 
         .photo {
             display: none;
@@ -182,12 +37,106 @@ body {
         .footer {
             display: none;
         }
+
+        .card-footer-sign {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    body {
+        #main {
+            .card-hobbies {
+                .reverse-hobbies {
+                    .content-hobbies {
+                        .text-hobbies {
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    .video-hobbies,
+                    .video-hobbies2,
+                    .video-hobbies3 {
+                        height: 75%;
+
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .video-hobbies:hover {
+                        .title-skate {
+                            .text-skate {
+                                transform: scale(0.8, 0.8) translate(0rem, 0.83rem);
+                            }
+                        }
+                    }
+
+                    .video-hobbies2:hover {
+                        .title-basket {
+                            .text-basket {
+                                transform: scale(0.8, 0.8) translate(0rem, 0.825rem);
+                            }
+                        }
+                    }
+
+                    .video-hobbies3:hover {
+                        .title-music {
+                            .text-music {
+                                transform: scale(0.8, 0.8) translate(0rem, 0.88rem);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-about-me {
+                .reverse-about-me {
+                    .content-about {
+                        .text-about {
+                            p {
+                                font-size: 0.8rem;
+                                line-height: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-education {
+                .reverse-education {
+                    .content-education {
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .card-skills {
+                .reverse-skills {
+                    .all-skills {
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .navbar {
+                .nav {
+                    h1 {
+                        font-size: 1.55rem;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 1441px) {
     body {
-
         #main {
             box-sizing: border-box;
             padding: 0.6rem;
@@ -195,7 +144,7 @@ body {
             display: grid;
             gap: 0.6rem;
             grid-template-columns: 1.5fr 0.9fr 2.6fr;
-            grid-template-rows: 2fr 0.5fr 0.5fr 1.3fr 0.8fr;
+            grid-template-rows: 2fr 0.5fr 0.5fr 1.3fr 0.25fr 0.55fr;
 
             .card-hobbies {
                 @include m.sizing(100%, 100%);
@@ -237,32 +186,6 @@ body {
                 }
             }
 
-            /* .reverse-hobbies {
-                .video-hobbies {
-                    .title-skate {
-                        h1 {
-                            font-size: 1.8rem;
-                        }
-                    }
-                }
-
-                .video-hobbies2 {
-                    .title-basket {
-                        h1 {
-                            font-size: 1.8rem;
-                        }
-                    }
-                }
-
-                .video-hobbies3 {
-                    .title-music {
-                        h1 {
-                            font-size: 1.8rem
-                        }
-                    }
-                }
-            } */
-
             .card-about-me {
                 @include m.sizing(100%, 100%);
                 grid-column: 1 / 2;
@@ -289,36 +212,38 @@ body {
                     transform: scale(1.2) translate(0rem, 0.5rem);
                 }
 
-                .content-about {
-                    @include m.sizing(100%, 100%);
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
+                .reverse-about-me {
+                    .content-about {
+                        @include m.sizing(100%, 100%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-                    h1 {
-                        margin: 0.8rem 0rem 0rem 0rem;
-                        font-size: 2.2rem;
-                    }
-
-                    .text-about {
-                        p {
-                            font-size: 0.88rem;
-                            padding: 0rem 2.3rem;
-                            line-height: 1.8rem;
+                        h1 {
+                            margin: 0rem 0rem 0.4rem 0rem;
+                            font-size: 2.2rem;
                         }
 
-                        /* .second-about-part {
-                            display: none;
-                        } */
+                        .text-about {
+                            p {
+                                font-size: 0.8rem;
+                                padding: 0rem 2.2rem;
+                                line-height: 1.8rem;
+                            }
 
-                        /* .last-about-part {
-                            display: none;
-                        } */
+                            /* .second-about-part {
+                                display: none;
+                            } */
+
+                            /* .last-about-part {
+                                display: none;
+                            } */
+                        }
                     }
-                }
 
-                .photo-about {
-                    display: none;
+                    .photo-about {
+                        display: none;
+                    }
                 }
             }
 
@@ -346,27 +271,31 @@ body {
                     }
                 }
 
-                &:hover .title-skills {
-                    transform: scale(1.2) translate(1.5rem, 0rem);
+                &:hover .icon-skills {
+                    transform: scale(1.1) translate(-0.5rem, 0rem);
                 }
-            }
 
-            .reverse-skills {
-                .all-skills {
-                    p {
-                        color: #051A4C;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 1rem;
-                        margin: 0;
-                        font-weight: 500;
-                    }
+                &:hover .title-skills {
+                    transform: scale(1.1) translate(0.5rem, 0rem);
+                }
 
-                    svg {
-                        width: 1.7rem;
-                        height: 1.7rem;
-                        margin-right: 1rem;
+                .reverse-skills {
+                    .all-skills {
+                        p {
+                            color: #051A4C;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1rem;
+                            margin: 0;
+                            font-weight: 500;
+                        }
+
+                        svg {
+                            width: 1.7rem;
+                            height: 1.7rem;
+                            margin-right: 1rem;
+                        }
                     }
                 }
             }
@@ -395,14 +324,14 @@ body {
             .card-contact {
                 @include m.sizing(100%, 100%);
                 grid-column: 1 / 2;
-                grid-row: 4 / 6;
+                grid-row: 4 / 7;
 
                 .contact {
                     background-color: #FF9B2F;
 
                     .icon-contact {
                         width: 14rem;
-                        height: 14rem;
+                        height: 12.5rem;
                     }
 
                     h1 {
@@ -417,22 +346,22 @@ body {
                 &:hover .title-contact {
                     transform: scale(1.2) translate(0rem, 0.3rem);
                 }
-            }
 
-            .reverse-contact {
-                box-sizing: border-box;
-                @include m.sizing(100%, 100%);
-                //background-color: #9e9e9e;
-                background-color: white;
-                border: 0.5rem #FF9B2F solid;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                flex-direction: column;
-
-                .content-contact {
+                .reverse-contact {
+                    box-sizing: border-box;
+                    @include m.sizing(100%, 100%);
+                    //background-color: #9e9e9e;
+                    background-color: white;
+                    border: 0.5rem #FF9B2F solid;
                     display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
 
+                    .content-contact {
+                        display: flex;
+
+                    }
                 }
             }
 
@@ -460,66 +389,70 @@ body {
                     }
                 }
 
+                &:hover .icon-education {
+                    transform: scale(1.15) translate(-0.5rem, 0rem);
+                }
+
                 &:hover .title-education {
-                    transform: scale(1.2) translate(1.5rem, 0rem);
+                    transform: scale(1.15) translate(0.5rem, 0rem);
                 }
-            }
 
-            .reverse-education {
-                @include m.sizing(100%, 100%);
-                background-color: #9e9e9e;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: white;
-                border: 0.5rem #FF9B2F solid;
-                box-sizing: border-box;
-                /* column-gap: 0.5rem; */
-
-                .content-education {
+                .reverse-education {
                     @include m.sizing(100%, 100%);
+                    background-color: #9e9e9e;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
+                    justify-content: center;
                     align-items: center;
-                    margin-left: 0rem;
+                    background-color: white;
+                    border: 0.5rem #FF9B2F solid;
+                    box-sizing: border-box;
+                    /* column-gap: 0.5rem; */
 
-                    h1 {
-                        color: #FF9B2F;
-                        font-size: 2.2rem;
-                        margin: 0;
-                        margin-top: 0.7rem;
-                        text-align: center;
-                    }
-
-                    p {
-                        color: #FF9B2F;
+                    .content-education {
+                        @include m.sizing(100%, 100%);
                         display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
                         align-items: center;
-                        font-size: 1rem;
-                        margin: 0.2rem;
-                        font-weight: 600;
+                        margin-left: 0rem;
+
+                        h1 {
+                            color: #FF9B2F;
+                            font-size: 2.2rem;
+                            margin: 0;
+                            margin-top: 0.7rem;
+                            text-align: center;
+                        }
+
+                        p {
+                            color: #FF9B2F;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1rem;
+                            margin: 0.2rem;
+                            font-weight: 600;
+                        }
+
+                        svg {
+                            width: 2.2rem;
+                            height: 2.2rem;
+                            margin-right: 1rem;
+                        }
+
+                        p:hover {
+                            color: #051A4C;
+                        }
                     }
 
-                    svg {
-                        width: 2.2rem;
-                        height: 2.2rem;
-                        margin-right: 1rem;
+                    .photos-education {
+                        /* @include m.sizing(25%, 90%);
+                        background-image: url(./svg/vscPorAndroidStudio.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 10rem;
+                        margin-top: 0.5rem; */
+                        display: none;
                     }
-
-                    p:hover {
-                        color: #051A4C;
-                    }
-                }
-
-                .photos-education {
-                    /* @include m.sizing(25%, 90%);
-                    background-image: url(./svg/vscPorAndroidStudio.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 10rem;
-                    margin-top: 0.5rem; */
-                    display: none;
                 }
             }
 
@@ -538,7 +471,7 @@ body {
             .card-projects {
                 @include m.sizing(100%, 100%);
                 grid-column: 3 / 4;
-                grid-row: 5 / 6;
+                grid-row: 5 / 7;
 
                 .projects {
                     background-color: #051A4C;
@@ -559,44 +492,710 @@ body {
                     }
                 }
 
+                &:hover .icon-projects {
+                    transform: scale(1.15) translate(-0.5rem, 0rem);
+                }
+
                 &:hover .title-projects {
-                    transform: scale(1.2) translate(1.5rem, 0rem);
+                    transform: scale(1.15) translate(0.5rem, 0rem);
+                }
+
+                .reverse-projects {
+
+                    h1 {
+                        margin-top: 0.9rem;
+                    }
+
+                    .content-projects {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+
+                        a,
+                        p {
+                            font-size: 1.1rem;
+
+                            img {
+                                width: 2.5rem;
+                                height: 2.5rem;
+                            }
+                        }
+
+                        .pitayapp {
+                            margin-right: 0rem;
+                        }
+
+                        .jav {
+                            margin-right: 0rem;
+                        }
+
+                        .future {
+                            font-size: 0.9rem;
+
+                            svg {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
                 }
             }
 
-            .reverse-projects {
+            .card-footer-sign {
+                display: grid;
+                @include m.sizing(100%, 100%);
+                grid-column: 2 / 3;
+                grid-row: 6 / 7;
 
-                h1 {
-                    margin-top: 0.9rem;
-                }
-
-                .content-projects {
+                .sign {
+                    background-color: #6f4100;
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include m.sizing(100%, 100%);
 
-                    a,
                     p {
-                        font-size: 1.1rem;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: transform 0.5s ease-in-out;
 
-                        img {
+                        svg {
+                            margin: 0rem 0rem 0rem 0.5rem;
                             width: 2.5rem;
                             height: 2.5rem;
                         }
                     }
+                }
 
-                    .pitayapp {
-                        margin-right: 0rem;
+                .reverse-sign {
+                    @include m.sizing(100%, 100%);
+                    /* background-color: #9e9e9e; */
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    border: 0.4rem #6f4100 solid;
+                    box-sizing: border-box;
+                    flex-direction: column;
+                    background-color: white;
+                }
+
+
+
+                border-radius: 0.4rem;
+                box-sizing: border-box;
+
+                p {
+                    text-align: center;
+                    width: 80%;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    color: #6f4100;
+                    margin: 0.5rem 0rem;
+                }
+
+                &:hover {
+                    .sign {
+                        p {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1310px) {
+
+    body {
+        #main {
+            .card-hobbies {
+                .hobbies {
+                    .icons-hobbies {
+
+                        .first-icon-skate,
+                        .second-icon-basket,
+                        .third-icon-music {
+                            svg {
+                                width: 3.5rem;
+                                height: 3.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .reverse-hobbies {
+                    .content-hobbies {
+                        .text-hobbies {
+                            font-size: 0.8rem;
+                        }
                     }
 
-                    .jav {
-                        margin-right: 0rem;
+                    .video-hobbies,
+                    .video-hobbies2,
+                    .video-hobbies3 {
+                        height: 70%;
+
+                        h1 {
+                            font-size: 1.8rem;
+                        }
                     }
 
-                    .future {
+                    .video-hobbies:hover {
+                        .title-skate {
+                            .text-skate {
+                                transform: scale(0.8, 0.8) translate(0rem, 0.83rem);
+                            }
+                        }
+                    }
+
+                    .video-hobbies2:hover {
+                        .title-basket {
+                            .text-basket {
+                                transform: scale(0.8, 0.8) translate(0rem, 0.825rem);
+                            }
+                        }
+                    }
+
+                    .video-hobbies3:hover {
+                        .title-music {
+                            .text-music {
+                                transform: scale(0.8, 0.8) translate(0rem, 0.88rem);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-about-me {
+                .reverse-about-me {
+                    .content-about {
+                        .text-about {
+                            p {
+                                font-size: 0.8rem;
+                                line-height: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-education {
+                .reverse-education {
+                    .content-education {
+                        p {
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+            }
+
+            .card-skills {
+                .reverse-skills {
+                    .all-skills {
+                        p {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+
+            .navbar {
+                .nav {
+                    h1 {
+                        font-size: 1.55rem;
+                    }
+                }
+            }
+
+            .card-projects {
+                .reverse-projects {
+                    .content-projects {
+
+                        .jav,
+                        .pitayapp {
+                            font-size: 1rem;
+                        }
+
+                        .future {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            .card-logo {
+                .reverse-logo {
+                    .name {
+                        p {
+                            font-size: 2.1rem;
+                        }
+                    }
+                }
+            }
+
+            .card-footer-sign {
+                .sign {
+                    p {
+                        font-size: 1.3rem;
 
                         svg {
-                            font-size: 1.5rem;
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1151px) {
+    body {
+        #main {
+            box-sizing: border-box;
+            padding: 0.6rem;
+            @include m.sizing(100vw, 100vh);
+            display: grid;
+            gap: 0.6rem;
+            grid-template-columns: 2.05fr 1.15fr 1.8fr;
+            grid-template-rows: 1.1fr 0.75fr 0.35fr 0.3fr 0.55fr 0.85fr;
+
+            .card-hobbies {
+                grid-column: 1 / 2;
+                grid-row: 3 / 6;
+
+                .hobbies {
+
+                    .icon-hobbies {
+
+                        width: 9rem;
+                        height: 9rem;
+
+                    }
+
+                    .clicking {
+                        display: none;
+                    }
+                }
+
+                .reverse-hobbies {
+                    .content-hobbies {
+                        width: 86%;
+
+                        /* .text-hobbies {
+                            font-size: 0.8rem;
+                        } */
+                        .icons-hobbies {
+
+                            .first-icon-skate,
+                            .second-icon-basket,
+                            .third-icon-music {
+                                svg {
+                                    width: 3rem;
+                                    height: 3rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .video-hobbies,
+                    .video-hobbies2,
+                    .video-hobbies3 {
+                        display: none;
+                    }
+                }
+            }
+
+            .card-about-me {
+                grid-column: 3 / 4;
+                grid-row: 1 / 4;
+
+                .about-me {
+                    .icon-about {
+                        width: 14rem;
+                        height: 14rem;
+                    }
+                }
+
+                .reverse-about-me {
+                    .content-about {
+                        .text-about {
+                            /* p {
+                                font-size: 0.8rem;
+                                line-height: 1.6rem;
+                            } */
+                        }
+                    }
+                }
+            }
+
+            .card-education {
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+
+                .education {
+
+                    .icon-education {
+                        width: 12rem;
+                        height: 7rem;
+                    }
+
+                    .clicking2 {
+                        width: auto;
+                        /* height: 3rem; */
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        position: absolute;
+                        left: 1.1rem;
+                        top: 1rem;
+                        padding: 0.35rem 0.4rem 0.35rem 0.4rem;
+                        border-radius: 0.35rem;
+                        background-color: white;
+                        color: #051A4C;
+                        transition: background-color 0.5s ease-in-out;
+
+                        .touch {
+                            display: none;
+                        }
+
+                        p {
+                            margin: 0;
+                            font-weight: 600;
+                            transition: color 0.5s ease-in-out;
+                        }
+
+                        svg {
+                            /* margin-left: 0.4rem; */
+                            width: 1.6rem;
+                            height: 1.6rem;
+                            color: #051A4C;
+                            transition: color 0.5s ease-in-out;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .clicking2 {
+                        background-color: #051A4C;
+
+                        p {
+                            color: white;
+                        }
+
+                        svg {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .card-logo {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+
+            .card-skills {
+                grid-column: 1 / 3;
+                grid-row: 6 / 7;
+
+                .reverse-skills {
+                    .all-skills {
+                        /* p {
+                            font-size: 0.9rem;
+                        } */
+                    }
+                }
+            }
+
+            .navbar {
+                .nav {
+                    /* h1 {
+                        font-size: 1.55rem;
+                    } */
+                }
+            }
+
+            .card-projects {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+
+                .reverse-projects {
+                    .content-projects {
+                        display: flex;
+                        flex-wrap: wrap;
+                        /* .jav,
+                        .pitayapp {
+                            font-size: 1rem;
+                        }
+
+                        .future {
+                            font-size: 0.8rem;
+                        } */
+                    }
+                }
+            }
+
+            .card-logo {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+
+            .card-contact {
+                grid-column: 3 / 4;
+                grid-row: 5 / 7;
+
+                .contact {
+                    .icon-contact {
+                        width: 11rem;
+                        height: 9.5rem;
+                    }
+                }
+            }
+
+            .card-footer-sign {
+                grid-column: 3 / 4;
+                grid-row: 4 / 5;
+
+                .sign {
+                    /* p {
+                        font-size: 1.3rem;
+                    } */
+                }
+
+                .reverse-sign {
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .photo {
+                grid-column: 2 / 3;
+                grid-row: 3 / 6;
+            }
+        }
+    }
+}
+
+@media (max-width: 951px) {
+    body {
+        #main {
+            .card-hobbies {
+                .hobbies {
+                    .title-hobbies {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .reverse-hobbies {
+                    .content-hobbies {
+                        .text-hobbies {
+                            font-size: 0.75rem;
+                        }
+
+                        .icons-hobbies {
+                            svg {
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-about-me {
+                .about-me {
+                    .icon-about {
+                        width: 12rem;
+                        height: 12rem;
+                    }
+
+                    .title-about {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .reverse-about-me {
+
+                    .content-about {
+                        h1 {
+                            font-size: 2rem;
+                        }
+
+                        .text-about {
+
+                            p {
+                                font-size: 0.75rem;
+                                line-height: 1.55rem;
+                            }
+
+                            .last-about-part {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-contact {
+                .contact {
+                    .icon-contact {
+                        width: 10rem;
+                        height: 8.5rem;
+                    }
+
+                    .title-contact {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .reverse-contact {
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    .content-contact {
+
+                        p,
+                        a {
+                            font-size: 1rem;
+
+                            svg {
+                                width: 2.2rem;
+                                height: 2.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-footer-sign {
+                .reverse-sign {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .card-skills {
+                .skills {
+                    .icon-skills {
+                        width: 7.5rem;
+                        height: 7.5rem;
+                    }
+
+                    .title-skills {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .reverse-skills {
+                    .all-skills {
+                        p {
+                            font-size: 0.8rem;
+
+                            svg {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-logo {
+                .reverse-logo {
+                    .name {
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 2.9rem;
+                        }
+                    }
+                }
+            }
+
+            .card-education {
+
+                .education {
+
+                    .title-education {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .reverse-education {
+                    .content-education {
+                        width: 90%;
+
+                        h1 {
+                            font-size: 2rem;
+                            margin-top: 0rem;
+                        }
+
+                        p {
+                            font-size: 0.8rem;
+
+                            svg {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-projects {
+
+                .projects {
+                    .title-projects {
+                        font-size: 1.5rem;
+                    }
+
+                    .icon-projects {
+                        width: 5.5rem;
+                        height: 5.5rem;
+                    }
+                }
+
+                .reverse-projects {
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    .content-projects {
+
+                        .jav {
+                            font-size: 0.85rem;
+
+                            img {
+                                width: 2rem;
+                                height: 2rem;
+                                margin: 0rem 0.7rem 0rem 0rem;
+                            }
+                        }
+
+                        .pitayapp {
+                            font-size: 0.85rem;
+
+                            img {
+                                width: 2rem;
+                                height: 2rem;
+                                margin: 0rem 0.7rem 0rem 0.7rem;
+                            }
+                        }
+
+                        .future {
+                            font-size: 0.7rem;
+
+                            img {
+                                width: 1.2rem;
+                                height: 1.2rem;
+                            }
                         }
                     }
                 }
@@ -607,12 +1206,14 @@ body {
 
 @media (max-width: 769px) {
     body {
+
         #main {
             box-sizing: border-box;
-            @include m.sizing(100vw, 100%);
+            width: 100vw;
+            height: 100%;
             display: grid;
             grid-template-columns: 1.55fr 0.45fr 0.45fr 1.55fr;
-            grid-template-rows: 31rem 7.5rem 12rem 37rem 3.5rem;
+            grid-template-rows: 30rem 7.5rem 12rem 37rem 3.5rem;
 
             .card-hobbies {
                 @include m.sizing(100%, 100%);
@@ -620,87 +1221,92 @@ body {
                 grid-row: 4 / 5;
 
                 .hobbies {
+
                     .icon-hobbies {
                         width: 10rem;
                         height: 10rem;
                     }
+
+                    .clicking {
+                        display: none;
+                    }
                 }
-            }
 
-            .reverse-hobbies {
+                .reverse-hobbies {
 
-                .content-hobbies {
-                    @include m.sizing(100%, 100%);
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    flex-direction: column;
-                    //padding: 2rem;
-                    box-sizing: border-box;
-
-                    h1 {
-                        color: #FF9B2F;
-                        margin: 1rem 0rem 0rem 0rem;
-                    }
-
-                    .text-hobbies {
-                        color: #FF9B2F;
-                        margin: 0.5rem 0rem 0rem 0rem;
-                        padding: 0rem 2.79rem;
-                        line-height: 1.8rem;
-                        font-weight: 500;
-                    }
-
-                    .icons-hobbies {
+                    .content-hobbies {
+                        @include m.sizing(100%, 100%);
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
                         flex-direction: column;
-                        margin: 0rem;
+                        //padding: 2rem;
+                        box-sizing: border-box;
 
-                        .first-icon-skate,
-                        .second-icon-basket,
-                        .third-icon-music {
-                            width: 70%;
-                            /* height: 20%; */
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            margin: 1rem 0rem;
-
-                            .tablet-text {
-                                display: block;
-                                font-size: 1.1rem;
-                                font-weight: 500;
-                            }
-
-                            .mobile-text {
-                                display: none;
-                            }
+                        h1 {
+                            color: #FF9B2F;
+                            margin: 1rem 0rem 0rem 0rem;
                         }
 
-                        /* div:first-child {
-                            p {
-                                margin-right: 0.4rem;
-                            }
-                        } */
-
-                        div:nth-child(2) {
-                            p {
-                                margin-right: 0.9rem;
-                            }
+                        .text-hobbies {
+                            color: #FF9B2F;
+                            margin: 0.5rem 0rem 0rem 0rem;
+                            padding: 0rem 2.79rem;
+                            line-height: 1.8rem;
+                            font-weight: 500;
                         }
 
-                        div:last-child {
-                            p {
-                                margin-right: 0.25rem;
+                        .icons-hobbies {
+                            flex-direction: column;
+                            margin: 0rem;
+
+                            .first-icon-skate,
+                            .second-icon-basket,
+                            .third-icon-music {
+                                width: 70%;
+                                /* height: 20%; */
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin: 1rem 0rem;
+
+                                .tablet-text {
+                                    display: block;
+                                    font-size: 1.1rem;
+                                    font-weight: 500;
+                                }
+
+                                .mobile-text {
+                                    display: none;
+                                }
+                            }
+
+                            /* div:first-child {
+                                p {
+                                    margin-right: 0.4rem;
+                                }
+                            } */
+
+                            div:nth-child(2) {
+                                p {
+                                    margin-right: 0.9rem;
+                                }
+                            }
+
+                            div:last-child {
+                                p {
+                                    margin-right: 0.25rem;
+                                }
                             }
                         }
                     }
-                }
 
-                .video-hobbies,
-                .video-hobbies2,
-                .video-hobbies3 {
-                    /* @include m.sizing(100%, 40%); */
-                    display: none;
+                    .video-hobbies,
+                    .video-hobbies2,
+                    .video-hobbies3 {
+                        /* @include m.sizing(100%, 40%); */
+                        display: none;
+                    }
                 }
             }
 
@@ -715,40 +1321,40 @@ body {
                         height: 11rem;
                     }
                 }
-            }
 
-            .reverse-about-me {
+                .reverse-about-me {
 
-                .content-about {
-                    @include m.sizing(100%, 100%);
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
+                    .content-about {
+                        @include m.sizing(100%, 100%);
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
 
-                    h1 {
-                        margin: 0.8rem 0rem 0rem 0rem;
-                        font-size: 2.2rem;
-                    }
-
-                    .text-about {
-                        p {
-                            font-size: 0.88rem;
-                            padding: 0rem 2.7rem;
-                            line-height: 1.8rem;
+                        h1 {
+                            margin: 0.8rem 0rem 0rem 0rem;
+                            font-size: 2.2rem;
                         }
 
-                        /* .second-about-part {
-                            display: none;
-                        } */
+                        .text-about {
+                            p {
+                                font-size: 0.88rem;
+                                padding: 0rem 2.7rem;
+                                line-height: 1.8rem;
+                            }
 
-                        /* .last-about-part {
-                            display: none;
-                        } */
+                            /* .second-about-part {
+                                display: none;
+                            } */
+
+                            /* .last-about-part {
+                                display: none;
+                            } */
+                        }
                     }
-                }
 
-                .photo-about {
-                    display: none;
+                    .photo-about {
+                        display: none;
+                    }
                 }
             }
 
@@ -758,13 +1364,30 @@ body {
                 grid-row: 2 / 4;
 
                 .projects {
+                    display: flex;
+                    flex-direction: column;
+
                     .icon-projects {
                         width: 10rem;
                         height: 10rem;
                     }
+
+                    h1 {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 .reverse-projects {
+
+                    h1 {
+                        margin-top: 0rem;
+                    }
+
+                    .content-projects {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
 
                     p,
                     a {
@@ -775,28 +1398,30 @@ body {
                         font-size: 0.9rem;
                     }
                 }
+
+                &:hover .title-projects {
+                    transform: scale(1.2) translate(0rem, 1rem);
+                }
             }
-
-
 
             .card-logo {
                 @include m.sizing(100%, 100%);
                 grid-column: 2 / 4;
                 grid-row: 2 / 3;
-            }
 
-            .reverse-logo {
+                .reverse-logo {
 
-                .name {
+                    .name {
 
-                    p {
-                        width: 100%;
-                        margin: 0.25rem 0rem 0rem 0rem;
-                        text-align: center;
-                        color: #6f4100;
-                        font-weight: 700;
-                        line-height: 2.1rem;
-                        font-size: 1.7rem;
+                        p {
+                            width: 100%;
+                            margin: 0.25rem 0rem 0rem 0rem;
+                            text-align: center;
+                            color: #6f4100;
+                            font-weight: 700;
+                            line-height: 2.1rem;
+                            font-size: 1.7rem;
+                        }
                     }
                 }
             }
@@ -819,20 +1444,20 @@ body {
                         height: 12rem;
                     }
                 }
-            }
 
-            .reverse-contact {
-                h1 {
-                    font-size: 2.2rem;
-                }
+                .reverse-contact {
+                    h1 {
+                        font-size: 2.2rem;
+                    }
 
-                a,
-                p {
-                    font-size: 1rem;
+                    a,
+                    p {
+                        font-size: 1rem;
 
-                    svg {
-                        width: 2rem;
-                        height: 2rem;
+                        svg {
+                            width: 2rem;
+                            height: 2rem;
+                        }
                     }
                 }
             }
@@ -843,65 +1468,95 @@ body {
                 grid-row: 1 / 2;
 
                 .education {
+                    display: flex;
+                    flex-direction: column;
+
+                    .clicking2 {
+                        padding: 0.4rem;
+
+                        .click {
+                            display: none;
+                        }
+
+                        .touch {
+                            display: block;
+                        }
+
+                        svg {
+                            width: 1.9rem;
+                            height: 1.9rem;
+                        }
+                    }
+
                     .icon-education {
                         width: 14rem;
                         height: 9rem;
                     }
-                }
-            }
-
-            .reverse-education {
-                @include m.sizing(100%, 100%);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 0.5rem;
-
-                .content-education {
-                    @include m.sizing(88%, 70%);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    margin-left: 0rem;
 
                     h1 {
-                        margin: 0rem 0rem 0.6rem 0rem;
-                        font-size: 2rem;
-                    }
-
-                    p {
-                        color: #FF9B2F;
-                        display: flex;
-                        align-items: center;
-                        font-size: 1.05rem;
-                        margin: 0.2rem;
-                        font-weight: 500;
-                    }
-
-                    svg {
-                        width: 5rem;
-                        height: 5rem;
-                        margin-right: 1.5rem;
-                    }
-
-                    .multiplatform {
-                        margin-left: 0.2rem;
-                    }
-
-                    p:hover {
-                        color: #051A4C;
+                        font-size: 1.5rem;
                     }
                 }
 
-                .photos-education {
-                    @include m.sizing(90%, 20%);
-                    background-image: url(./svg/vscAndroidNetbeans.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 18rem;
-                    margin-top: 0rem;
+                .reverse-education {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    .content-education {
+                        @include m.sizing(88%, 70%);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        margin-left: 0rem;
+
+                        h1 {
+                            margin: 0rem 0rem 0.6rem 0rem;
+                            font-size: 2rem;
+                        }
+
+                        p {
+                            color: #FF9B2F;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.05rem;
+                            margin: 0.2rem;
+                            font-weight: 500;
+                            /* text-align: center; */
+                        }
+
+                        svg {
+                            width: 5rem;
+                            height: 5rem;
+                            margin-right: 1.5rem;
+                        }
+
+                        .multiplatform {
+                            margin-left: 0.2rem;
+                        }
+
+                        p:hover {
+                            color: #051A4C;
+                        }
+                    }
+
+                    .photos-education {
+                        display: flex;
+                        @include m.sizing(90%, 17%);
+                        background-image: url(./svg/vscAndroidNetbeans.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 14rem;
+                        margin-top: 0rem;
+                    }
+                }
+
+                &:hover .title-education {
+                    transform: scale(1.2) translate(0rem, 1rem);
                 }
             }
 
@@ -911,90 +1566,102 @@ body {
                 grid-row: 1 / 2;
 
                 .skills {
+                    display: flex;
+                    flex-direction: column;
+
                     .icon-skills {
                         width: 9rem;
                         height: 9rem;
                     }
-                }
-            }
 
-            .reverse-skills {
-                h1 {
-                    font-size: 2rem;
-                    margin-top: 1rem;
+                    h1 {
+                        margin: 0rem;
+                        font-size: 1.5rem;
+                    }
                 }
 
-                .all-skills {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: repeat(4, 1fr);
-                    width: 85%;
-                    height: 80%;
-                    justify-content: center;
-                    align-items: center;
+                .reverse-skills {
+                    h1 {
+                        font-size: 2rem;
+                        margin-top: 1rem;
+                    }
 
-                    p {
-                        color: #051A4C;
-                        display: flex;
+                    .all-skills {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: repeat(4, 1fr);
+                        width: 85%;
+                        height: 80%;
                         justify-content: center;
                         align-items: center;
-                        font-size: 1rem;
-                        margin: 0;
-                        font-weight: 500;
-                    }
 
-                    svg {
-                        width: 1.8rem;
-                        height: 1.8rem;
-                    }
-
-                    .html {
-                        grid-column: 1 / 2;
-                        grid-row: 1 / 2;
-
-                    }
-
-                    .scss {
-                        grid-column: 2 / 3;
-                        grid-row: 1 / 2;
-                    }
-
-                    .javascript {
-                        grid-column: 1 / 2;
-                        grid-row: 2 / 3;
+                        p {
+                            color: #051A4C;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1rem;
+                            margin: 0;
+                            font-weight: 500;
+                        }
 
                         svg {
                             width: 1.8rem;
                             height: 1.8rem;
                         }
-                    }
 
-                    .bbdd {
-                        grid-column: 2 / 3;
-                        grid-row: 2 / 3;
-                        margin-right: 0rem;
-                    }
+                        .html {
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
 
-                    .vuejs {
-                        grid-column: 1 / 2;
-                        grid-row: 3 / 4;
-                    }
+                        }
 
-                    .figma {
-                        grid-column: 2 / 3;
-                        grid-row: 3 / 4;
-                    }
+                        .scss {
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 2;
+                        }
 
-                    .terminal {
-                        grid-column: 1 / 2;
-                        grid-row: 4 / 5;
-                        margin-right: 0rem;
-                    }
+                        .javascript {
+                            grid-column: 1 / 2;
+                            grid-row: 2 / 3;
 
-                    .git {
-                        grid-column: 2 / 3;
-                        grid-row: 4 / 5;
+                            svg {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
+                        }
+
+                        .bbdd {
+                            grid-column: 2 / 3;
+                            grid-row: 2 / 3;
+                            margin-right: 0rem;
+                        }
+
+                        .vuejs {
+                            grid-column: 1 / 2;
+                            grid-row: 3 / 4;
+                        }
+
+                        .figma {
+                            grid-column: 2 / 3;
+                            grid-row: 3 / 4;
+                        }
+
+                        .terminal {
+                            grid-column: 1 / 2;
+                            grid-row: 4 / 5;
+                            margin-right: 0rem;
+                        }
+
+                        .git {
+                            grid-column: 2 / 3;
+                            grid-row: 4 / 5;
+                        }
                     }
+                }
+
+                &:hover .title-skills {
+                    transform: scale(1.2) translate(0rem, 1rem);
                 }
             }
 
@@ -1003,19 +1670,23 @@ body {
                 @include m.sizing(100%, 100%);
                 grid-column: 1 / 5;
                 grid-row: 5 / 6;
-                background-color: #F0E0BC;
+                background-color: #6f4100; // #F0E0BC;
+                border: none;
                 justify-content: center;
                 align-items: center;
                 border-radius: 0.4rem;
+                box-sizing: border-box;
 
                 p {
+                    width: auto;
                     font-weight: 800;
                     font-size: 1.5rem;
-                    color: #051A4C;
+                    color: white; // #051A4C;
                 }
 
                 .part-two {
                     margin-left: 0.4rem;
+                    display: block;
                 }
             }
 
@@ -1024,6 +1695,10 @@ body {
             }
 
             .navbar {
+                display: none;
+            }
+
+            .card-footer-sign {
                 display: none;
             }
         }
@@ -1495,7 +2170,7 @@ body {
                 @include m.sizing(100%, 100%);
                 grid-column: 1 / 3;
                 grid-row: 9 / 10;
-                background-color: #F0E0BC;
+                background-color: #6f4100; // #F0E0BC;
                 justify-content: center;
                 align-items: center;
                 border-radius: 0.4rem;
@@ -1503,7 +2178,7 @@ body {
                 p {
                     font-weight: 800;
                     font-size: 1.5rem;
-                    color: #051A4C;
+                    color: white; // #051A4C;
                 }
 
                 .part-two {
