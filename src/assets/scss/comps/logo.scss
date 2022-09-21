@@ -33,27 +33,20 @@
 
 .reverse-logo {
     @include m.sizing(100%, 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flexWithoutDirection(flex, center, center);
     background-color: white;
     border: 0.5rem #6f4100 solid;
     box-sizing: border-box;
 
     .name {
         @include m.sizing(100%, 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include m.flexWithoutDirection(flex, center, center);
 
         p {
+            @include m.fontProps(2.7rem, 3.5rem, center, 700);
             width: 100%;
             margin: 0;
-            text-align: center;
             color: #6f4100;
-            font-weight: 700;
-            line-height: 3.5rem;
-            font-size: 2.7rem;
         }
     }
 }

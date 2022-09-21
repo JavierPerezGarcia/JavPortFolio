@@ -9,25 +9,17 @@ body {
 
             .about-me {
                 @include m.sizing(100%, 100%);
+                @include m.flexWithDirection(flex, center, center, column);
                 background-color: #051A4C;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
 
                 h1 {
                     display: none;
                 }
 
                 .icon-about {
-                    width: 21rem;
-                    height: 21rem;
+                    @include m.sizing(21rem, 21rem);
                     transition: transform 0.5s ease-in-out;
                 }
-
-                /* h1 {
-                    color: #FF9B2F;
-                } */
             }
 
             &:hover .icon-about {
@@ -37,15 +29,10 @@ body {
 
         .reverse-about-me {
             @include m.sizing(100%, 100%);
-            /* background-color: #9e9e9e; */
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            @include m.flexWithDirection(flex, space-evenly, center, row);
             border: 0.5rem #051A4C solid;
             box-sizing: border-box;
-            flex-direction: row;
             background-color: white;
-            //gap: 5rem;
 
             h1 {
                 color: #051A4C;
@@ -55,41 +42,22 @@ body {
 
             .content-about {
                 @include m.sizing(40%, 100%);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                @include m.flexWithDirection(flex, center, center, column);
 
                 .text-about {
 
                     p {
                         color: #051A4C;
-                        font-size: 0.9rem;
-                        line-height: 1.6rem;
-                        text-align: justify;
-                        font-weight: 500;
-                        margin-top: 0.5rem;
-                        padding: 0rem 0.5rem;
+                        @include m.fontProps(0.9rem, 1.6rem, justify, 500);
+                        @include m.spaces(0.5rem 0rem 0rem 0rem, 0rem 0.5rem);
                     }
                 }
             }
 
             .photo-about {
                 @include m.sizing(45%, 85%);
-                //transform: translate(-50%, -50%);
                 transform-style: preserve-3d;
                 perspective: 3000px;
-                /* transition: .5s; */
-                /* pointer-events: none; */
-
-                /* .active2 .card-front {
-                    transform: rotateY(-180deg);
-                    pointer-events: all;
-                } */
-
-                /* .active2 {
-                    transform: rotateY(0deg);
-                } */
 
                 &:hover .card-front {
                     transform: rotateY(-180deg);
@@ -102,10 +70,8 @@ body {
 
                 .card-front {
                     @include m.sizing(100%, 100%);
-                    background-image: url('/javftv3.jpg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
+                    @include m.bgImg(url('/javftv3.jpg'), no-repeat, center, cover);
+                    @include m.flexWithoutDirection(flex, flex-end, flex-start);
                     background-color: #051A4C;
                     box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
                     border-radius: 0.2rem;
@@ -113,23 +79,16 @@ body {
                     transform: rotateY(0deg);
                     transition: 1s;
                     position: absolute;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-start;
 
                     .acces-photo {
                         .text-one {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            /* flex-direction: column; */
+                            @include m.flexWithoutDirection(flex, center, center);
+                            @include m.spaces(0.5rem 0.5rem 0rem 0rem, 0.2rem 0.5rem 0.1rem 0.5rem);
                             background-color: rgba(5, 26, 76, 1);
-                            padding: 0.2rem 0.5rem 0.1rem 0.5rem;
                             border-radius: 0.3rem;
-                            margin: 0.5rem 0.5rem 0rem 0rem;
 
                             svg {
-                                margin-right: 0.5rem;
+                                margin: 0rem 0.5rem 0rem 0rem;
                                 font-size: 2rem;
                             }
                         }
@@ -138,10 +97,7 @@ body {
 
                 .card-back {
                     @include m.sizing(100%, 100%);
-                    background-image: url('/javftv4.jpg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
+                    @include m.bgImg(url('/javftv4.jpg'), no-repeat, center, cover);
                     background-color: #051A4C;
                     box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
                     border-radius: 0.2rem;
@@ -151,41 +107,26 @@ body {
                     position: absolute;
 
                     .acces-photo2 {
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
+                        @include m.flexWithoutDirection(flex, flex-end, center);
 
                         .text-two {
-                            display: flex;
-                            align-items: center;
-                            /* flex-direction: column; */
+                            @include m.flexWithoutDirection(flex, none, center);
+                            @include m.spaces(0.5rem 0.5rem 0rem 0rem, 0.4rem 0.5rem 0.2rem 0.4rem);
                             background-color: rgba(5, 26, 76, 1);
-                            padding: 0.4rem 0.5rem 0.2rem 0.4rem;
-                            margin: 0.5rem 0.5rem 0rem 0rem;
                             border-radius: 0.3rem;
 
                             svg {
-                                margin-right: 0.3rem;
-                                /* margin: 0rem 0.3rem 0rem 0.5rem; */
+                                margin: 0rem 0.3rem 0rem 0rem;
                                 font-size: 1.7rem;
                             }
                         }
                     }
                 }
-
-                /* img {
-                    @include m.sizing(100%, 85%);
-                    background-color: #051A4C;
-                    box-shadow: 0rem 0rem 0rem 0.25rem #051A4C;
-                    border-radius: 0.2rem;
-                } */
             }
 
             .video-hobbies {
                 @include m.sizing(30%, 100%);
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include m.flexWithoutDirection(flex, center, center);
 
                 video {
                     width: 100%;
@@ -212,13 +153,5 @@ body {
                 }
             }
         }
-
-        /* .active {
-            .reverse-about-me {
-                .photo-about {
-                    pointer-events: auto;
-                }
-            }
-        } */
     }
 }

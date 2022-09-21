@@ -8,29 +8,22 @@ body {
             grid-row: 1 / 2;
 
             .hobbies {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include m.flexWithDirection(flex, center, center, column);
                 @include m.sizing(100%, 100%);
                 background-color: #FF9B2F;
-                flex-direction: column;
 
                 h1 {
                     display: none;
                 }
 
                 .icon-hobbies {
-                    width: 15rem;
-                    height: 15rem;
+                    @include m.sizing(15rem, 15rem);
                     transition: transform 0.5s ease-in-out;
                 }
 
                 .clicking {
                     width: auto;
-                    /* height: 3rem; */
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
+                    @include m.flexWithoutDirection(flex, space-evenly, center);
                     position: absolute;
                     left: 1.1rem;
                     top: 1rem;
@@ -47,9 +40,7 @@ body {
                     }
 
                     svg {
-                        /* margin-left: 0.4rem; */
-                        width: 2rem;
-                        height: 2rem;
+                        @include m.sizing(2rem, 2rem);
                         color: #051A4C;
                         transition: color 0.5s ease-in-out;
                     }
@@ -76,22 +67,14 @@ body {
 
             .reverse-hobbies {
                 @include m.sizing(100%, 100%);
-                background-color: #9e9e9e;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
+                @include m.flexWithoutDirection(flex, space-evenly, center);
                 background-color: white;
                 border: 0.5rem #FF9B2F solid;
                 box-sizing: border-box;
 
                 .content-hobbies {
                     @include m.sizing(35%, 100%);
-                    flex-direction: row;
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    flex-direction: column;
-                    /* padding: 2rem; */
+                    @include m.flexWithDirection(flex, space-evenly, center, column);
                     box-sizing: border-box;
 
                     h1 {
@@ -101,24 +84,17 @@ body {
 
                     p {
                         color: #FF9B2F; //#D67813;
-                        margin: 0;
-                        text-align: justify;
-                        line-height: 1.7rem;
-                        padding: 0rem 0rem;
-                        font-weight: 600;
-                        font-size: 1rem;
+                        @include m.fontProps(1rem, 1.7rem, justify, 600);
+                        @include m.spaces(0, 0rem 0rem);
                     }
 
                     .icons-hobbies {
                         width: 100%;
-                        display: flex;
-                        justify-content: space-evenly;
-                        align-items: center;
+                        @include m.flexWithoutDirection(flex, space-evenly, center);
                         margin: 1rem 0.5rem;
 
                         svg {
-                            width: 4rem;
-                            height: 4rem;
+                            @include m.sizing(4rem, 4rem);
                             color: #FF9B2F;
                         }
 
@@ -342,30 +318,21 @@ body {
                     @include m.sizing(auto, 80%);
                     display: flex;
                     position: relative;
-                    /* margin-right: 2.5rem;
-                margin-left: 0.5rem; */
                     background-color: #FF9B2F;
                     box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
                     border-radius: 0.2rem;
 
                     video {
                         width: 100%;
-                        /* border: 0.25rem solid #FF9B2F; */
-
                         border-radius: 0.2rem;
-                        display: flex;
-                        justify-content: end;
-                        align-items: flex-end;
+                        @include m.flexWithoutDirection(flex, flex-end, flex-end);
                         transition: transform 0.6s ease-in-out;
                     }
 
                     .title-skate {
                         position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
+                        @include m.sizing(100%, 100%);
+                        @include m.flexWithoutDirection(flex, center, flex-end);
 
                         .text-skate {
                             color: white;
@@ -377,10 +344,8 @@ body {
                 }
 
                 .video-hobbies:hover {
-
                     background-color: #6f4100;
                     box-shadow: 0rem 0rem 0rem 0.25rem #6f4100;
-                    /* transition: transform 0.6s ease-in-out; */
 
                     video {
                         box-shadow: 0rem #FF9B2F;
@@ -414,11 +379,8 @@ body {
 
                     .title-basket {
                         position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
+                        @include m.sizing(100%, 100%);
+                        @include m.flexWithoutDirection(flex, center, flex-end);
 
                         .text-basket {
                             color: white;
@@ -452,8 +414,6 @@ body {
                     background-color: #FF9B2F;
                     box-shadow: 0rem 0rem 0rem 0.25rem #FF9B2F;
                     border-radius: 0.2rem;
-                    /* transition: background-color 0.5s ease-in-out;
-                transition: box-shadow 0.5s ease-in-out; */
 
                     video {
                         width: 100%;
@@ -463,11 +423,8 @@ body {
 
                     .title-music {
                         position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
+                        @include m.sizing(100%, 100%);
+                        @include m.flexWithoutDirection(flex, center, flex-end);
 
                         .text-music {
                             color: white;

@@ -526,10 +526,11 @@ body {
                         }
 
                         .jav {
-                            margin-right: 0rem;
+                            margin: 0rem 0.5rem 0rem 0rem;
                         }
 
                         .future {
+                            margin: 0rem 0.1rem 0rem 0rem;
                             font-size: 0.9rem;
 
                             svg {
@@ -935,6 +936,10 @@ body {
                         .future {
                             font-size: 0.8rem;
                         } */
+
+                        .jav {
+                            margin: 0rem 0rem 0rem 0rem;
+                        }
                     }
                 }
             }
@@ -1251,9 +1256,10 @@ body {
                         .text-hobbies {
                             color: #FF9B2F;
                             margin: 0.5rem 0rem 0rem 0rem;
-                            padding: 0rem 2.79rem;
+                            padding: 0rem 2.7rem;
                             line-height: 1.8rem;
                             font-weight: 500;
+                            font-size: 0.85rem;
                         }
 
                         .icons-hobbies {
@@ -1263,12 +1269,17 @@ body {
                             .first-icon-skate,
                             .second-icon-basket,
                             .third-icon-music {
-                                width: 70%;
+                                width: 80%;
                                 /* height: 20%; */
                                 display: flex;
                                 align-items: center;
-                                justify-content: space-between;
+                                justify-content: space-around;
                                 margin: 1rem 0rem;
+
+                                svg {
+                                    width: 3.5rem;
+                                    height: 3.5rem;
+                                }
 
                                 .tablet-text {
                                     display: block;
@@ -1289,13 +1300,13 @@ body {
 
                             div:nth-child(2) {
                                 p {
-                                    margin-right: 0.9rem;
+                                    margin-right: 0.5rem;
                                 }
                             }
 
                             div:last-child {
                                 p {
-                                    margin-right: 0.25rem;
+                                    margin-right: 1.55rem;
                                 }
                             }
                         }
@@ -1319,6 +1330,10 @@ body {
                     .icon-about {
                         width: 11rem;
                         height: 11rem;
+                    }
+
+                    h1 {
+                        margin: 0.2rem 0rem 0rem 0rem;
                     }
                 }
 
@@ -1346,15 +1361,23 @@ body {
                                 display: none;
                             } */
 
-                            /* .last-about-part {
-                                display: none;
-                            } */
+                            .last-about-part {
+                                display: block;
+                            }
                         }
                     }
 
                     .photo-about {
                         display: none;
                     }
+                }
+
+                &:hover .icon-about {
+                    transform: scale(1.2);
+                }
+
+                &:hover .title-about {
+                    transform: scale(1.2) translate(0rem, 1rem);
                 }
             }
 
@@ -1368,12 +1391,13 @@ body {
                     flex-direction: column;
 
                     .icon-projects {
-                        width: 10rem;
-                        height: 10rem;
+                        width: 9rem;
+                        height: 9rem;
                     }
 
-                    h1 {
-                        font-size: 1.5rem;
+                    .title-projects {
+                        font-size: 1.3rem;
+                        margin-top: 0.1rem;
                     }
                 }
 
@@ -1381,22 +1405,43 @@ body {
 
                     h1 {
                         margin-top: 0rem;
+                        font-size: 2rem;
                     }
 
                     .content-projects {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+
+                        .jav {
+                            font-size: 1.15rem;
+
+                            img {
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        }
+
+                        .pitayapp {
+                            font-size: 1.15rem;
+
+                            img {
+                                margin: 0rem 0.8rem 0rem 0rem;
+                                width: 2.5rem;
+                                height: 2.5rem;
+                            }
+                        }
+
+                        .future {
+                            font-size: 0.8rem;
+                        }
                     }
 
-                    p,
-                    a {
-                        font-size: 1.15rem;
-                    }
 
-                    .future {
-                        font-size: 0.9rem;
-                    }
+                }
+
+                &:hover .icon-projects {
+                    transform: scale(1.2);
                 }
 
                 &:hover .title-projects {
@@ -1419,8 +1464,8 @@ body {
                             text-align: center;
                             color: #6f4100;
                             font-weight: 700;
-                            line-height: 2.1rem;
-                            font-size: 1.7rem;
+                            line-height: 2rem;
+                            font-size: 1.5rem;
                         }
                     }
                 }
@@ -1440,25 +1485,37 @@ body {
 
                 .contact {
                     .icon-contact {
-                        width: 12rem;
-                        height: 12rem;
+                        width: 10rem;
+                        height: 8rem;
                     }
                 }
 
                 .reverse-contact {
+
                     h1 {
-                        font-size: 2.2rem;
+                        font-size: 2rem;
                     }
 
-                    a,
-                    p {
-                        font-size: 1rem;
+                    .content-contact {
 
-                        svg {
-                            width: 2rem;
-                            height: 2rem;
+                        a,
+                        p {
+                            font-size: 0.9rem;
+
+                            svg {
+                                width: 1.7rem;
+                                height: 1.7rem;
+                            }
                         }
                     }
+                }
+
+                &:hover .icon-contact {
+                    transform: scale(1.2);
+                }
+
+                &:hover .title-contact {
+                    transform: scale(1.2) translate(0rem, 1rem);
                 }
             }
 
@@ -1515,24 +1572,24 @@ body {
                         margin-left: 0rem;
 
                         h1 {
-                            margin: 0rem 0rem 0.6rem 0rem;
                             font-size: 2rem;
+                            margin-bottom: 0.5rem;
                         }
 
                         p {
                             color: #FF9B2F;
                             display: flex;
                             align-items: center;
-                            font-size: 1.05rem;
+                            font-size: 1rem;
                             margin: 0.2rem;
                             font-weight: 500;
-                            /* text-align: center; */
-                        }
+                            text-align: center;
 
-                        svg {
-                            width: 5rem;
-                            height: 5rem;
-                            margin-right: 1.5rem;
+                            svg {
+                                width: 5rem;
+                                height: 5rem;
+                                margin-right: 0.5rem;
+                            }
                         }
 
                         .multiplatform {
@@ -1553,6 +1610,10 @@ body {
                         background-size: 14rem;
                         margin-top: 0rem;
                     }
+                }
+
+                &:hover .icon-education {
+                    transform: scale(1.2);
                 }
 
                 &:hover .title-education {
@@ -1590,7 +1651,7 @@ body {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         grid-template-rows: repeat(4, 1fr);
-                        width: 85%;
+                        width: 90%;
                         height: 80%;
                         justify-content: center;
                         align-items: center;
@@ -1600,15 +1661,17 @@ body {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                             margin: 0;
                             font-weight: 500;
+
+                            svg {
+                                width: 1.6rem;
+                                height: 1.6rem;
+                            }
                         }
 
-                        svg {
-                            width: 1.8rem;
-                            height: 1.8rem;
-                        }
+
 
                         .html {
                             grid-column: 1 / 2;
@@ -1626,8 +1689,8 @@ body {
                             grid-row: 2 / 3;
 
                             svg {
-                                width: 1.8rem;
-                                height: 1.8rem;
+                                width: 1.7rem;
+                                height: 1.7rem;
                             }
                         }
 
@@ -1658,6 +1721,10 @@ body {
                             grid-row: 4 / 5;
                         }
                     }
+                }
+
+                &:hover .icon-skills {
+                    transform: scale(1.2);
                 }
 
                 &:hover .title-skills {
@@ -1704,6 +1771,8 @@ body {
         }
     }
 }
+
+@media (max-width: 615px) {}
 
 @media (max-width: 415px) {
     body {
