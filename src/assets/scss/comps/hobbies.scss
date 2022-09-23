@@ -106,6 +106,48 @@ body {
                             }
                         }
 
+                        .first-icon-skate {
+                            .iconify--ic {
+                                transition: color linear 2s;
+                                animation: skating-out 2s linear;
+                            }
+                        }
+
+                        .first-icon-skate:hover {
+                            .iconify--ic {
+                                animation: skating 2s linear infinite;
+                                color: #051A4C;
+                            }
+                        }
+
+                        .second-icon-basket {
+                            .iconify--iconoir {
+                                transition: color linear 1s;
+                                animation: rotating-out 1s linear;
+                            }
+                        }
+
+                        .second-icon-basket:hover {
+                            .iconify--iconoir {
+                                animation: rotating 1.5s linear infinite;
+                                color: #051A4C;
+                            }
+                        }
+
+                        .third-icon-music {
+                            .iconify--icon-park-solid {
+                                transition: color linear 0.5s;
+                                animation: biglittle-out 0.5s linear;
+                            }
+                        }
+
+                        .third-icon-music:hover {
+                            .iconify--icon-park-solid {
+                                animation: biglittle 1s linear infinite;
+                                color: #051A4C;
+                            }
+                        }
+
                         .iconify--ic {
                             transition: color linear 2s;
                             animation: skating-out 2s linear;

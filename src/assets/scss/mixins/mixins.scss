@@ -34,3 +34,9 @@
     text-align: $text-align;
     font-weight: $font-weight;
 }
+
+@mixin grid($display, $grid-template-columns, $grid-template-rows) {
+    display: $display;
+    grid-template-columns: $grid-template-columns;
+    grid-template-rows: $grid-template-rows;
+}
