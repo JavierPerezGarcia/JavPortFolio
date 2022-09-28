@@ -1,0 +1,563 @@
+@use '../mixins/mixins.scss' as m;
+
+body {
+
+    #main {
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1.55fr 0.45fr 0.45fr 1.55fr;
+        grid-template-rows: 30rem 7.5rem 12rem 37rem 3.5rem;
+
+        .card-hobbies {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+
+            .hobbies {
+
+                .icon-hobbies {
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                .clicking {
+                    display: none;
+                }
+            }
+
+            .reverse-hobbies {
+
+                .content-hobbies {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: column;
+                    //padding: 2rem;
+                    box-sizing: border-box;
+
+                    h1 {
+                        color: #FF9B2F;
+                        margin: 1rem 0rem 0rem 0rem;
+                    }
+
+                    .text-hobbies {
+                        color: #FF9B2F;
+                        margin: 0.5rem 0rem 0rem 0rem;
+                        padding: 0rem 2.7rem;
+                        line-height: 1.8rem;
+                        font-weight: 500;
+                        font-size: 0.85rem;
+                    }
+
+                    .icons-hobbies {
+                        flex-direction: column;
+                        margin: 0rem;
+
+                        .first-icon-skate,
+                        .second-icon-basket,
+                        .third-icon-music {
+                            width: 80%;
+                            /* height: 20%; */
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            margin: 1rem 0rem;
+
+                            svg {
+                                width: 3.5rem;
+                                height: 3.5rem;
+                            }
+
+                            .tablet-text {
+                                display: block;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                            }
+
+                            .mobile-text {
+                                display: none;
+                            }
+                        }
+
+                        /* div:first-child {
+                            p {
+                                margin-right: 0.4rem;
+                            }
+                        } */
+
+                        div:nth-child(2) {
+                            p {
+                                margin-right: 0.5rem;
+                            }
+                        }
+
+                        div:last-child {
+                            p {
+                                margin-right: 1.55rem;
+                            }
+                        }
+                    }
+                }
+
+                .video-hobbies,
+                .video-hobbies2,
+                .video-hobbies3 {
+                    /* @include m.sizing(100%, 40%); */
+                    display: none;
+                }
+            }
+        }
+
+        .card-about-me {
+            @include m.sizing(100%, 100%);
+            grid-column: 3 / 5;
+            grid-row: 4 / 5;
+
+            .about-me {
+                .icon-about {
+                    width: 11rem;
+                    height: 11rem;
+                }
+
+                h1 {
+                    margin: 0.2rem 0rem 0rem 0rem;
+                }
+            }
+
+            .reverse-about-me {
+
+                .content-about {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        margin: 0.6rem 0rem 0.2rem 0rem;
+                        font-size: 2.2rem;
+                    }
+
+                    .text-about {
+                        p {
+                            font-size: 0.84rem;
+                            padding: 0rem 2.4rem;
+                            line-height: 1.8rem;
+                        }
+
+                        /* .second-about-part {
+                            display: none;
+                        } */
+
+                        .last-about-part {
+                            display: none;
+                        }
+                    }
+                }
+
+                .photo-about {
+                    display: none;
+                }
+            }
+
+            &:hover .icon-about {
+                transform: scale(1.2);
+            }
+
+            &:hover .title-about {
+                transform: scale(1.2) translate(0rem, 1rem);
+            }
+        }
+
+        .card-projects {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+
+            .projects {
+                display: flex;
+                flex-direction: column;
+
+                .icon-projects {
+                    width: 9rem;
+                    height: 9rem;
+                }
+
+                .title-projects {
+                    font-size: 1.3rem;
+                    margin-top: 0.1rem;
+                }
+            }
+
+            .reverse-projects {
+
+                h1 {
+                    margin-top: 0rem;
+                    font-size: 1.8rem;
+                }
+
+                .content-projects {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .jav {
+                        font-size: 1rem;
+
+                        img {
+                            width: 2.5rem;
+                            /* height: 3rem; */
+                        }
+                    }
+
+                    .pitayapp {
+                        font-size: 1rem;
+
+                        img {
+                            margin: 0rem 0.8rem 0rem 0rem;
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+
+                    .future {
+                        font-size: 0.75rem;
+                    }
+                }
+
+
+            }
+
+            &:hover .icon-projects {
+                transform: scale(1.2);
+            }
+
+            &:hover .title-projects {
+                transform: scale(1.2) translate(0rem, 1rem);
+            }
+        }
+
+        .card-logo {
+            @include m.sizing(100%, 100%);
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+
+            .reverse-logo {
+
+                .name {
+
+                    p {
+                        width: 100%;
+                        margin: 0.25rem 0rem 0rem 0rem;
+                        text-align: center;
+                        color: #6f4100;
+                        font-weight: 700;
+                        line-height: 2rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .photo {
+            @include m.sizing(100%, 100%);
+            grid-column: 2 / 4;
+            grid-row: 3 / 4;
+            border-radius: 0.4rem;
+        }
+
+        .card-contact {
+            @include m.sizing(100%, 100%);
+            grid-column: 4 / 5;
+            grid-row: 2 / 4;
+
+            .contact {
+                .icon-contact {
+                    width: 10rem;
+                    height: 8rem;
+                }
+            }
+
+            .reverse-contact {
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                .content-contact {
+
+                    a,
+                    p {
+                        font-size: 0.9rem;
+
+                        svg {
+                            width: 1.7rem;
+                            height: 1.7rem;
+                        }
+                    }
+                }
+            }
+
+            &:hover .icon-contact {
+                transform: scale(1.2);
+            }
+
+            &:hover .title-contact {
+                transform: scale(1.2) translate(0rem, 1rem);
+            }
+        }
+
+        .card-education {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+
+            .education {
+                display: flex;
+                flex-direction: column;
+
+                .clicking2 {
+                    padding: 0.4rem;
+
+                    .click {
+                        display: none;
+                    }
+
+                    .touch {
+                        display: block;
+                    }
+
+                    svg {
+                        width: 1.9rem;
+                        height: 1.9rem;
+                    }
+                }
+
+                .icon-education {
+                    width: 14rem;
+                    height: 9rem;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .reverse-education {
+                @include m.sizing(100%, 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .content-education {
+                    @include m.sizing(88%, 70%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-left: 0rem;
+
+                    h1 {
+                        font-size: 2rem;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p {
+                        color: #FF9B2F;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 0.2rem;
+                        font-weight: 500;
+                        text-align: center;
+
+                        svg {
+                            width: 5rem;
+                            height: 5rem;
+                            margin-right: 0.5rem;
+                        }
+                    }
+
+                    .multiplatform {
+                        margin-left: 0.2rem;
+                    }
+
+                    p:hover {
+                        color: #051A4C;
+                    }
+                }
+
+                .photos-education {
+                    display: flex;
+                    @include m.sizing(90%, 17%);
+                    background-image: url(../../../svg/vscAndroidNetbeans.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 14rem;
+                    margin-top: 0rem;
+                }
+            }
+
+            &:hover .icon-education {
+                transform: scale(1.2);
+            }
+
+            &:hover .title-education {
+                transform: scale(1.2) translate(0rem, 1rem);
+            }
+        }
+
+        .card-skills {
+            @include m.sizing(100%, 100%);
+            grid-column: 3 / 5;
+            grid-row: 1 / 2;
+
+            .skills {
+                display: flex;
+                flex-direction: column;
+
+                .icon-skills {
+                    width: 9rem;
+                    height: 9rem;
+                }
+
+                h1 {
+                    margin: 0rem;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .reverse-skills {
+                h1 {
+                    font-size: 2rem;
+                    margin-top: 1rem;
+                }
+
+                .all-skills {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: repeat(4, 1fr);
+                    width: 90%;
+                    height: 80%;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        color: #051A4C;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 0.9rem;
+                        margin: 0;
+                        font-weight: 500;
+
+                        svg {
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
+                    }
+
+
+
+                    .html {
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 2;
+
+                    }
+
+                    .scss {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+                    }
+
+                    .javascript {
+                        grid-column: 1 / 2;
+                        grid-row: 2 / 3;
+
+                        svg {
+                            width: 1.7rem;
+                            height: 1.7rem;
+                        }
+                    }
+
+                    .bbdd {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                        margin-right: 0rem;
+                    }
+
+                    .vuejs {
+                        grid-column: 1 / 2;
+                        grid-row: 3 / 4;
+                    }
+
+                    .figma {
+                        grid-column: 2 / 3;
+                        grid-row: 3 / 4;
+                    }
+
+                    .terminal {
+                        grid-column: 1 / 2;
+                        grid-row: 4 / 5;
+                        margin-right: 0rem;
+                    }
+
+                    .git {
+                        grid-column: 2 / 3;
+                        grid-row: 4 / 5;
+                    }
+                }
+            }
+
+            &:hover .icon-skills {
+                transform: scale(1.2);
+            }
+
+            &:hover .title-skills {
+                transform: scale(1.2) translate(0rem, 1rem);
+            }
+        }
+
+        .footer {
+            display: flex;
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 5;
+            grid-row: 5 / 6;
+            background-color: #6f4100; // #F0E0BC;
+            border: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.4rem;
+            box-sizing: border-box;
+
+            p {
+                width: auto;
+                margin: 0;
+                font-weight: 700;
+                font-size: 1.35rem;
+                color: white; // #051A4C;
+            }
+
+            .part-two {
+                margin-left: 0.4rem;
+                display: block;
+            }
+        }
+
+        .click-me {
+            display: none;
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        .card-footer-sign {
+            display: none;
+        }
+    }
+}

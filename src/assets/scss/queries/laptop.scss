@@ -1,0 +1,472 @@
+@use '../mixins/mixins.scss' as m;
+
+body {
+    #main {
+        box-sizing: border-box;
+        padding: 0.6rem;
+        @include m.sizing(100vw, 100vh);
+        display: grid;
+        gap: 0.6rem;
+        grid-template-columns: 1.5fr 0.9fr 2.6fr;
+        grid-template-rows: 2fr 0.5fr 0.5fr 1.3fr 0.25fr 0.55fr;
+
+        .card-hobbies {
+            @include m.sizing(100%, 100%);
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+
+            .hobbies {
+                background-color: #FF9B2F;
+
+                .clicking {
+                    width: auto;
+                    /* height: 3rem; */
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    position: absolute;
+                    left: auto;
+                    top: 1rem;
+                    right: 1.1rem;
+                }
+
+                .icon-hobbies {
+                    width: 14rem;
+                    height: 14rem;
+                }
+
+                h1 {
+                    display: block;
+                    margin: 0.1rem 0.3rem 0rem 0rem;
+                    font-size: 1.7rem;
+                    transition: transform 0.5s ease-in-out;
+                    color: #051A4C;
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            &:hover .title-hobbies {
+                transform: scale(1.2) translate(0rem, 0.5rem);
+            }
+        }
+
+        .card-about-me {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+
+            .about-me {
+                background-color: #051A4C;
+
+                .icon-about {
+                    width: 16rem;
+                    height: 16rem;
+                }
+
+                h1 {
+                    display: block;
+                    margin: 1rem 0rem 0rem 0rem;
+                    font-size: 1.7rem;
+                    transition: transform 0.5s ease-in-out;
+                    //color: #FF9B2F;
+                }
+            }
+
+            &:hover .title-about {
+                transform: scale(1.2) translate(0rem, 0.5rem);
+            }
+
+            .reverse-about-me {
+                .content-about {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        margin: 0rem 0rem 0.4rem 0rem;
+                        font-size: 2.2rem;
+                    }
+
+                    .text-about {
+                        p {
+                            font-size: 0.8rem;
+                            padding: 0rem 2.2rem;
+                            line-height: 1.8rem;
+                        }
+
+                        /* .second-about-part {
+                            display: none;
+                        } */
+
+                        /* .last-about-part {
+                            display: none;
+                        } */
+                    }
+                }
+
+                .photo-about {
+                    display: none;
+                }
+            }
+        }
+
+        .card-skills {
+            @include m.sizing(100%, 100%);
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
+
+            .skills {
+                background-color: #051A4C;
+                display: flex;
+                flex-direction: row;
+
+                .icon-skills {
+                    width: 8.5rem;
+                    height: 8.5rem;
+                }
+
+                h1 {
+                    display: block;
+                    margin: 0rem 0rem 0rem 1.5rem;
+                    font-size: 1.7rem;
+                    /* color: #051A4C; */
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            &:hover .icon-skills {
+                transform: scale(1.1) translate(-0.5rem, 0rem);
+            }
+
+            &:hover .title-skills {
+                transform: scale(1.1) translate(0.5rem, 0rem);
+            }
+
+            .reverse-skills {
+                .all-skills {
+                    p {
+                        color: #051A4C;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 0;
+                        font-weight: 500;
+                    }
+
+                    svg {
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+
+        .card-logo {
+            @include m.sizing(100%, 100%);
+            /* background-color: #F0E0BC; */
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .name {
+                p {
+                    font-size: 2.4rem;
+                    line-height: 3.3rem;
+                }
+            }
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        .card-contact {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 2;
+            grid-row: 4 / 7;
+
+            .contact {
+                background-color: #FF9B2F;
+
+                .icon-contact {
+                    width: 14rem;
+                    height: 12.5rem;
+                }
+
+                h1 {
+                    display: block;
+                    margin: 0rem 0rem 0rem 0rem;
+                    font-size: 1.7rem;
+                    color: #051A4C;
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            &:hover .title-contact {
+                transform: scale(1.2) translate(0rem, 0.3rem);
+            }
+
+            .reverse-contact {
+                box-sizing: border-box;
+                @include m.sizing(100%, 100%);
+                //background-color: #9e9e9e;
+                background-color: white;
+                border: 0.5rem #FF9B2F solid;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+
+                .content-contact {
+                    display: flex;
+
+                }
+            }
+        }
+
+        .card-education {
+            @include m.sizing(100%, 100%);
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+
+            .education {
+                background-color: #FF9B2F;
+                display: flex;
+                flex-direction: row;
+
+                .icon-education {
+                    width: 15rem;
+                    height: 9rem;
+                }
+
+                h1 {
+                    display: block;
+                    margin: 0rem 0rem 0rem 0rem;
+                    font-size: 1.7rem;
+                    color: #051A4C;
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            &:hover .icon-education {
+                transform: scale(1.15) translate(-0.5rem, 0rem);
+            }
+
+            &:hover .title-education {
+                transform: scale(1.15) translate(0.5rem, 0rem);
+            }
+
+            .reverse-education {
+                @include m.sizing(100%, 100%);
+                background-color: #9e9e9e;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border: 0.5rem #FF9B2F solid;
+                box-sizing: border-box;
+                /* column-gap: 0.5rem; */
+
+                .content-education {
+                    @include m.sizing(100%, 100%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-left: 0rem;
+
+                    h1 {
+                        color: #FF9B2F;
+                        font-size: 2.2rem;
+                        margin: 0;
+                        margin-top: 0.7rem;
+                        text-align: center;
+                    }
+
+                    p {
+                        color: #FF9B2F;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 0.2rem;
+                        font-weight: 600;
+                    }
+
+                    svg {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        margin-right: 1rem;
+                    }
+
+                    p:hover {
+                        color: #051A4C;
+                    }
+                }
+
+                .photos-education {
+                    /* @include m.sizing(25%, 90%);
+                    background-image: url(./svg/vscPorAndroidStudio.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 10rem;
+                    margin-top: 0.5rem; */
+                    display: none;
+                }
+            }
+        }
+
+        .photo {
+            display: block;
+            @include m.sizing(100%, 100%);
+            grid-column: 2 / 3;
+            grid-row: 4 / 6;
+            background-image: url(../../../img/fotoCVnueva.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.4rem;
+        }
+
+        .card-projects {
+            @include m.sizing(100%, 100%);
+            grid-column: 3 / 4;
+            grid-row: 5 / 7;
+
+            .projects {
+                background-color: #051A4C;
+                display: flex;
+                flex-direction: row;
+
+                .icon-projects {
+                    width: 6.5rem;
+                    height: 6.5rem;
+                }
+
+                h1 {
+                    display: block;
+                    margin: 0rem 0rem 0rem 0rem;
+                    font-size: 1.7rem;
+                    /* color: #051A4C; */
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            &:hover .icon-projects {
+                transform: scale(1.15) translate(-0.5rem, 0rem);
+            }
+
+            &:hover .title-projects {
+                transform: scale(1.15) translate(0.5rem, 0rem);
+            }
+
+            .reverse-projects {
+
+                h1 {
+                    margin-top: 0.9rem;
+                }
+
+                .content-projects {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                    a,
+                    p {
+                        font-size: 1.1rem;
+
+                        /* img {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        } */
+                    }
+
+                    .pitayapp {
+                        margin-right: 0rem;
+                    }
+
+                    .jav {
+                        margin: 0rem 0.5rem 0rem 0rem;
+                    }
+
+                    .future {
+                        margin: 0rem 0.1rem 0rem 0rem;
+                        font-size: 0.9rem;
+
+                        svg {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-footer-sign {
+            display: grid;
+            @include m.sizing(100%, 100%);
+            grid-column: 2 / 3;
+            grid-row: 6 / 7;
+
+            .sign {
+                background-color: #6f4100;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                @include m.sizing(100%, 100%);
+
+                p {
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: transform 0.5s ease-in-out;
+
+                    svg {
+                        margin: 0rem 0rem 0rem 0.5rem;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+            }
+
+            .reverse-sign {
+                @include m.sizing(100%, 100%);
+                /* background-color: #9e9e9e; */
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                border: 0.4rem #6f4100 solid;
+                box-sizing: border-box;
+                flex-direction: column;
+                background-color: white;
+            }
+
+
+
+            border-radius: 0.4rem;
+            box-sizing: border-box;
+
+            p {
+                text-align: center;
+                width: 80%;
+                font-weight: 700;
+                font-size: 1.5rem;
+                color: #6f4100;
+                margin: 0.5rem 0rem;
+            }
+
+            &:hover {
+                .sign {
+                    p {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -135,7 +135,7 @@ body {
     }
 }
 
-@media (max-width: 1441px) {
+/* @media (max-width: 1441px) {
     body {
         #main {
             box-sizing: border-box;
@@ -156,7 +156,7 @@ body {
 
                     .clicking {
                         width: auto;
-                        /* height: 3rem; */
+                        //height: 3rem;
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
@@ -230,14 +230,6 @@ body {
                                 padding: 0rem 2.2rem;
                                 line-height: 1.8rem;
                             }
-
-                            /* .second-about-part {
-                                display: none;
-                            } */
-
-                            /* .last-about-part {
-                                display: none;
-                            } */
                         }
                     }
 
@@ -266,7 +258,7 @@ body {
                         display: block;
                         margin: 0rem 0rem 0rem 1.5rem;
                         font-size: 1.7rem;
-                        /* color: #051A4C; */
+                        //color: #051A4C;
                         transition: transform 0.5s ease-in-out;
                     }
                 }
@@ -302,7 +294,7 @@ body {
 
             .card-logo {
                 @include m.sizing(100%, 100%);
-                /* background-color: #F0E0BC; */
+                //background-color: #F0E0BC;
                 grid-column: 2 / 3;
                 grid-row: 2 / 4;
                 display: flex;
@@ -406,7 +398,7 @@ body {
                     background-color: white;
                     border: 0.5rem #FF9B2F solid;
                     box-sizing: border-box;
-                    /* column-gap: 0.5rem; */
+                    //column-gap: 0.5rem;
 
                     .content-education {
                         @include m.sizing(100%, 100%);
@@ -445,12 +437,6 @@ body {
                     }
 
                     .photos-education {
-                        /* @include m.sizing(25%, 90%);
-                        background-image: url(./svg/vscPorAndroidStudio.svg);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: 10rem;
-                        margin-top: 0.5rem; */
                         display: none;
                     }
                 }
@@ -487,7 +473,7 @@ body {
                         display: block;
                         margin: 0rem 0rem 0rem 0rem;
                         font-size: 1.7rem;
-                        /* color: #051A4C; */
+                        //color: #051A4C;
                         transition: transform 0.5s ease-in-out;
                     }
                 }
@@ -514,11 +500,6 @@ body {
                         a,
                         p {
                             font-size: 1.1rem;
-
-                            /* img {
-                                width: 2.5rem;
-                                height: 2.5rem;
-                            } */
                         }
 
                         .pitayapp {
@@ -572,7 +553,7 @@ body {
 
                 .reverse-sign {
                     @include m.sizing(100%, 100%);
-                    /* background-color: #9e9e9e; */
+                    //background-color: #9e9e9e;
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
@@ -606,7 +587,7 @@ body {
             }
         }
     }
-}
+} */
 
 @media (max-width: 1310px) {
 
@@ -753,7 +734,7 @@ body {
     }
 }
 
-@media (max-width: 1151px) {
+/* @media (max-width: 1151px) {
     body {
         #main {
             box-sizing: border-box;
@@ -786,9 +767,6 @@ body {
                     .content-hobbies {
                         width: 86%;
 
-                        /* .text-hobbies {
-                            font-size: 0.8rem;
-                        } */
                         .icons-hobbies {
 
                             .first-icon-skate,
@@ -820,17 +798,6 @@ body {
                         height: 14rem;
                     }
                 }
-
-                /* .reverse-about-me {
-                    .content-about {
-                        .text-about {
-                            p {
-                                font-size: 0.8rem;
-                                line-height: 1.6rem;
-                            }
-                        }
-                    }
-                } */
             }
 
             .card-education {
@@ -846,7 +813,7 @@ body {
 
                     .clicking2 {
                         width: auto;
-                        /* height: 3rem; */
+                        //height: 3rem;
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
@@ -870,7 +837,7 @@ body {
                         }
 
                         svg {
-                            /* margin-left: 0.4rem; */
+                            //margin-left: 0.4rem;
                             width: 1.6rem;
                             height: 1.6rem;
                             color: #051A4C;
@@ -902,23 +869,7 @@ body {
             .card-skills {
                 grid-column: 1 / 3;
                 grid-row: 6 / 7;
-
-                /* .reverse-skills {
-                    .all-skills {
-                        p {
-                            font-size: 0.9rem;
-                        }
-                    }
-                } */
             }
-
-            /* .navbar {
-                .nav {
-                    h1 {
-                        font-size: 1.55rem;
-                    }
-                }
-            } */
 
             .card-projects {
                 grid-column: 1 / 2;
@@ -928,14 +879,6 @@ body {
                     .content-projects {
                         display: flex;
                         flex-wrap: wrap;
-                        /* .jav,
-                        .pitayapp {
-                            font-size: 1rem;
-                        }
-
-                        .future {
-                            font-size: 0.8rem;
-                        } */
 
                         .jav {
                             margin: 0rem 0rem 0rem 0rem;
@@ -965,12 +908,6 @@ body {
                 grid-column: 3 / 4;
                 grid-row: 4 / 5;
 
-                /* .sign {
-                    p {
-                        font-size: 1.3rem;
-                    }
-                } */
-
                 .reverse-sign {
                     p {
                         width: 100%;
@@ -984,7 +921,7 @@ body {
             }
         }
     }
-}
+} */
 
 @media (max-width: 951px) {
     body {
@@ -1000,6 +937,7 @@ body {
                     .content-hobbies {
                         .text-hobbies {
                             font-size: 0.75rem;
+                            text-align: center;
                         }
 
                         .icons-hobbies {
@@ -1035,7 +973,8 @@ body {
 
                             p {
                                 font-size: 0.75rem;
-                                line-height: 1.55rem;
+                                line-height: 1.6rem;
+                                text-align: center;
                             }
 
                             .last-about-part {
@@ -1209,7 +1148,7 @@ body {
     }
 }
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
     body {
 
         #main {
@@ -1270,7 +1209,7 @@ body {
                             .second-icon-basket,
                             .third-icon-music {
                                 width: 80%;
-                                /* height: 20%; */
+                                //height: 20%;
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-around;
@@ -1292,12 +1231,6 @@ body {
                                 }
                             }
 
-                            /* div:first-child {
-                                p {
-                                    margin-right: 0.4rem;
-                                }
-                            } */
-
                             div:nth-child(2) {
                                 p {
                                     margin-right: 0.5rem;
@@ -1315,7 +1248,7 @@ body {
                     .video-hobbies,
                     .video-hobbies2,
                     .video-hobbies3 {
-                        /* @include m.sizing(100%, 40%); */
+                        //@include m.sizing(100%, 40%);
                         display: none;
                     }
                 }
@@ -1342,27 +1275,23 @@ body {
                     .content-about {
                         @include m.sizing(100%, 100%);
                         display: flex;
-                        justify-content: space-evenly;
+                        justify-content: center;
                         align-items: center;
 
                         h1 {
-                            margin: 0.8rem 0rem 0rem 0rem;
+                            margin: 0.6rem 0rem 0.2rem 0rem;
                             font-size: 2.2rem;
                         }
 
                         .text-about {
                             p {
-                                font-size: 0.88rem;
-                                padding: 0rem 2.7rem;
+                                font-size: 0.84rem;
+                                padding: 0rem 2.4rem;
                                 line-height: 1.8rem;
                             }
 
-                            /* .second-about-part {
-                                display: none;
-                            } */
-
                             .last-about-part {
-                                display: block;
+                                display: none;
                             }
                         }
                     }
@@ -1405,7 +1334,7 @@ body {
 
                     h1 {
                         margin-top: 0rem;
-                        font-size: 2rem;
+                        font-size: 1.8rem;
                     }
 
                     .content-projects {
@@ -1414,26 +1343,26 @@ body {
                         justify-content: space-between;
 
                         .jav {
-                            font-size: 1.15rem;
+                            font-size: 1rem;
 
                             img {
-                                width: 3rem;
-                                /* height: 3rem; */
+                                width: 2.5rem;
+                                //height: 3rem;
                             }
                         }
 
                         .pitayapp {
-                            font-size: 1.15rem;
+                            font-size: 1rem;
 
                             img {
                                 margin: 0rem 0.8rem 0rem 0rem;
-                                width: 2.5rem;
-                                height: 2.5rem;
+                                width: 2rem;
+                                height: 2rem;
                             }
                         }
 
                         .future {
-                            font-size: 0.8rem;
+                            font-size: 0.75rem;
                         }
                     }
 
@@ -1493,7 +1422,7 @@ body {
                 .reverse-contact {
 
                     h1 {
-                        font-size: 2rem;
+                        font-size: 1.8rem;
                     }
 
                     .content-contact {
@@ -1746,8 +1675,9 @@ body {
 
                 p {
                     width: auto;
-                    font-weight: 800;
-                    font-size: 1.5rem;
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 1.35rem;
                     color: white; // #051A4C;
                 }
 
@@ -1770,9 +1700,265 @@ body {
             }
         }
     }
-}
+} */
 
-@media (max-width: 615px) {}
+/* @media (max-width: 615px) {
+    body {
+        #main {
+            box-sizing: border-box;
+            padding: 0.6rem;
+            @include m.sizing(100vw, 100%);
+            display: grid;
+            gap: 0.6rem;
+            grid-template-columns: 0.6fr 0.4fr;
+            grid-template-rows: 14rem 4rem 29rem 22rem 22rem 28rem 22rem 25rem 4rem;
+
+            .card-logo {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+
+                .logo {
+                    display: flex;
+                    justify-content: center;
+
+                    .mask-logo {
+                        width: 95%;
+                    }
+                }
+
+                .reverse-logo {
+                    .name {
+                        p {
+                            line-height: 4rem;
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+
+            .photo {
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+            }
+
+            .click-me {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                background-color: #FF9B2F;
+                font-size: 1.4rem;
+                border-radius: 0.4rem;
+
+                p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    line-height: 1.6rem;
+                    margin: 0rem;
+
+                    svg {
+                        width: 2rem;
+                        height: 2rem;
+                        margin: 0rem 1rem 0rem 0rem;
+                        padding: 0.35rem 0.4rem 0.35rem 0.4rem;
+                        border-radius: 0.35rem;
+                        background-color: white;
+                        color: #051A4C;
+                    }
+                }
+            }
+
+            .card-about-me {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 3 / 4;
+
+                .reverse-about-me {
+                    .content-about {
+
+                        h1 {
+                            margin: 0rem 0rem 0.5rem 0rem;
+                        }
+
+                        .text-about {
+                            p {
+                                line-height: 1.6rem;
+                            }
+
+                            .last-about-part {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-hobbies {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 4 / 5;
+
+                .reverse-hobbies {
+                    .content-hobbies {
+                        h1 {
+                            margin: 0rem;
+                        }
+
+                        .text-hobbies {
+                            margin: 0rem 0rem 0.5rem 0rem;
+                        }
+
+                        .icons-hobbies {
+                            flex-direction: row;
+
+                            .first-icon-skate,
+                            .second-icon-basket,
+                            .third-icon-music {
+                                flex-direction: column;
+                                margin: 0rem;
+
+                                .tablet-text {
+                                    margin: 1rem 0rem 0rem 0rem;
+                                }
+                            }
+
+                            .first-icon-skate {
+                                .mobile-text {
+                                    display: block;
+                                    margin: 1rem 0rem 0rem 0rem;
+                                    font-size: 1.1rem;
+                                }
+
+                                .tablet-text {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-skills {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 5 / 6;
+
+                .reverse-skills {
+                    .all-skills {
+                        width: 95%;
+                        height: 70%;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: repeat(3, 1fr);
+
+                        .html {
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
+
+                        }
+
+                        .scss {
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 2;
+                        }
+
+                        .javascript {
+                            grid-column: 3 / 4;
+                            grid-row: 1 / 2;
+                        }
+
+                        .bbdd {
+                            grid-column: 1 / 2;
+                            grid-row: 2 / 3;
+                        }
+
+                        .vuejs {
+                            grid-column: 2 / 3;
+                            grid-row: 2 / 3;
+                        }
+
+                        .figma {
+                            grid-column: 3 / 4;
+                            grid-row: 2 / 3;
+                        }
+
+                        .terminal {
+                            grid-column: 1 / 3;
+                            grid-row: 3 / 4;
+                            margin: 0rem 1rem 0rem 0rem;
+                        }
+
+                        .git {
+                            grid-column: 2 / 4;
+                            grid-row: 3 / 4;
+                        }
+                    }
+                }
+            }
+
+            .card-education {
+                @include m.sizing(100%, 100%);
+                grid-column: 1 / 3;
+                grid-row: 6 / 7;
+
+                .reverse-education {
+                    .content-education {
+                        h1 {
+                            margin: 0rem 0rem 0rem 0.9rem;
+                        }
+
+                        p {
+                            svg {
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        }
+                    }
+
+                    .photos-education {
+                        background-size: 16rem;
+                        height: 20%;
+                    }
+                }
+            }
+
+            .card-projects {
+                grid-column: 1 / 3;
+                grid-row: 7 / 8;
+
+                .reverse-projects {
+                    .content-projects {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+
+                        .future {
+                            grid-column: 1 / 3;
+                            grid-row: 2 / 3;
+                        }
+                    }
+                }
+            }
+
+            .card-contact {
+                grid-column: 1 / 3;
+                grid-row: 8 / 9;
+            }
+
+            .footer {
+                grid-column: 1 / 3;
+                grid-row: 9 / 10;
+            }
+        }
+    }
+} */
 
 @media (max-width: 415px) {
     body {

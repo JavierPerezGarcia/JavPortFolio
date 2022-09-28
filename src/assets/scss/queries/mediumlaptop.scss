@@ -1,0 +1,232 @@
+@use '../mixins/mixins.scss' as m;
+
+body {
+    #main {
+        box-sizing: border-box;
+        padding: 0.6rem;
+        @include m.sizing(100vw, 100vh);
+        display: grid;
+        gap: 0.6rem;
+        grid-template-columns: 2.05fr 1.15fr 1.8fr;
+        grid-template-rows: 1.1fr 0.75fr 0.35fr 0.3fr 0.55fr 0.85fr;
+
+        .card-hobbies {
+            grid-column: 1 / 2;
+            grid-row: 3 / 6;
+
+            .hobbies {
+
+                .icon-hobbies {
+
+                    width: 9rem;
+                    height: 9rem;
+
+                }
+
+                .clicking {
+                    display: none;
+                }
+            }
+
+            .reverse-hobbies {
+                .content-hobbies {
+                    width: 86%;
+
+                    /* .text-hobbies {
+                        font-size: 0.8rem;
+                    } */
+                    .icons-hobbies {
+
+                        .first-icon-skate,
+                        .second-icon-basket,
+                        .third-icon-music {
+                            svg {
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        }
+                    }
+                }
+
+                .video-hobbies,
+                .video-hobbies2,
+                .video-hobbies3 {
+                    display: none;
+                }
+            }
+        }
+
+        .card-about-me {
+            grid-column: 3 / 4;
+            grid-row: 1 / 4;
+
+            .about-me {
+                .icon-about {
+                    width: 14rem;
+                    height: 14rem;
+                }
+            }
+
+            /* .reverse-about-me {
+                .content-about {
+                    .text-about {
+                        p {
+                            font-size: 0.8rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            } */
+        }
+
+        .card-education {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+
+            .education {
+
+                .icon-education {
+                    width: 12rem;
+                    height: 7rem;
+                }
+
+                .clicking2 {
+                    width: auto;
+                    /* height: 3rem; */
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    position: absolute;
+                    left: 1.1rem;
+                    top: 1rem;
+                    padding: 0.35rem 0.4rem 0.35rem 0.4rem;
+                    border-radius: 0.35rem;
+                    background-color: white;
+                    color: #051A4C;
+                    transition: background-color 0.5s ease-in-out;
+
+                    .touch {
+                        display: none;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-weight: 600;
+                        transition: color 0.5s ease-in-out;
+                    }
+
+                    svg {
+                        /* margin-left: 0.4rem; */
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        color: #051A4C;
+                        transition: color 0.5s ease-in-out;
+                    }
+                }
+            }
+
+            &:hover {
+                .clicking2 {
+                    background-color: #051A4C;
+
+                    p {
+                        color: white;
+                    }
+
+                    svg {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .card-logo {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .card-skills {
+            grid-column: 1 / 3;
+            grid-row: 6 / 7;
+
+            /* .reverse-skills {
+                .all-skills {
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
+            } */
+        }
+
+        /* .navbar {
+            .nav {
+                h1 {
+                    font-size: 1.55rem;
+                }
+            }
+        } */
+
+        .card-projects {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+
+            .reverse-projects {
+                .content-projects {
+                    display: flex;
+                    flex-wrap: wrap;
+                    /* .jav,
+                    .pitayapp {
+                        font-size: 1rem;
+                    }
+
+                    .future {
+                        font-size: 0.8rem;
+                    } */
+
+                    .jav {
+                        margin: 0rem 0rem 0rem 0rem;
+                    }
+                }
+            }
+        }
+
+        .card-logo {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .card-contact {
+            grid-column: 3 / 4;
+            grid-row: 5 / 7;
+
+            .contact {
+                .icon-contact {
+                    width: 11rem;
+                    height: 9.5rem;
+                }
+            }
+        }
+
+        .card-footer-sign {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+
+            /* .sign {
+                p {
+                    font-size: 1.3rem;
+                }
+            } */
+
+            .reverse-sign {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        .photo {
+            grid-column: 2 / 3;
+            grid-row: 3 / 6;
+        }
+    }
+}

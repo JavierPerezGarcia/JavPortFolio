@@ -1,0 +1,257 @@
+@use '../mixins/mixins.scss' as m;
+
+body {
+    #main {
+        box-sizing: border-box;
+        padding: 0.6rem;
+        @include m.sizing(100vw, 100%);
+        display: grid;
+        gap: 0.6rem;
+        grid-template-columns: 0.6fr 0.4fr;
+        grid-template-rows: 14rem 4rem 29rem 22rem 22rem 28rem 22rem 25rem 4rem;
+
+        .card-logo {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            .logo {
+                display: flex;
+                justify-content: center;
+
+                .mask-logo {
+                    width: 95%;
+                }
+            }
+
+            .reverse-logo {
+                .name {
+                    p {
+                        line-height: 4rem;
+                        font-size: 3.2rem;
+                    }
+                }
+            }
+        }
+
+        .photo {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .click-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: #FF9B2F;
+            font-size: 1.4rem;
+            border-radius: 0.4rem;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                color: white;
+                font-weight: 700;
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+                margin: 0rem;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                    margin: 0rem 1rem 0rem 0rem;
+                    padding: 0.35rem 0.4rem 0.35rem 0.4rem;
+                    border-radius: 0.35rem;
+                    background-color: white;
+                    color: #051A4C;
+                }
+            }
+        }
+
+        .card-about-me {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+
+            .reverse-about-me {
+                .content-about {
+
+                    h1 {
+                        margin: 0rem 0rem 0.5rem 0rem;
+                    }
+
+                    .text-about {
+                        p {
+                            line-height: 1.6rem;
+                        }
+
+                        .last-about-part {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-hobbies {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+
+            .reverse-hobbies {
+                .content-hobbies {
+                    h1 {
+                        margin: 0rem;
+                    }
+
+                    .text-hobbies {
+                        margin: 0rem 0rem 0.5rem 0rem;
+                    }
+
+                    .icons-hobbies {
+                        flex-direction: row;
+
+                        .first-icon-skate,
+                        .second-icon-basket,
+                        .third-icon-music {
+                            flex-direction: column;
+                            margin: 0rem;
+
+                            .tablet-text {
+                                margin: 1rem 0rem 0rem 0rem;
+                            }
+                        }
+
+                        .first-icon-skate {
+                            .mobile-text {
+                                display: block;
+                                margin: 1rem 0rem 0rem 0rem;
+                                font-size: 1.1rem;
+                            }
+
+                            .tablet-text {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-skills {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 3;
+            grid-row: 5 / 6;
+
+            .reverse-skills {
+                .all-skills {
+                    width: 95%;
+                    height: 70%;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: repeat(3, 1fr);
+
+                    .html {
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 2;
+
+                    }
+
+                    .scss {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+                    }
+
+                    .javascript {
+                        grid-column: 3 / 4;
+                        grid-row: 1 / 2;
+                    }
+
+                    .bbdd {
+                        grid-column: 1 / 2;
+                        grid-row: 2 / 3;
+                    }
+
+                    .vuejs {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                    }
+
+                    .figma {
+                        grid-column: 3 / 4;
+                        grid-row: 2 / 3;
+                    }
+
+                    .terminal {
+                        grid-column: 1 / 3;
+                        grid-row: 3 / 4;
+                        margin: 0rem 1rem 0rem 0rem;
+                    }
+
+                    .git {
+                        grid-column: 2 / 4;
+                        grid-row: 3 / 4;
+                    }
+                }
+            }
+        }
+
+        .card-education {
+            @include m.sizing(100%, 100%);
+            grid-column: 1 / 3;
+            grid-row: 6 / 7;
+
+            .reverse-education {
+                .content-education {
+                    h1 {
+                        margin: 0rem 0rem 0rem 0.9rem;
+                    }
+
+                    p {
+                        svg {
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                    }
+                }
+
+                .photos-education {
+                    background-size: 16rem;
+                    height: 20%;
+                }
+            }
+        }
+
+        .card-projects {
+            grid-column: 1 / 3;
+            grid-row: 7 / 8;
+
+            .reverse-projects {
+                .content-projects {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+
+                    .future {
+                        grid-column: 1 / 3;
+                        grid-row: 2 / 3;
+                    }
+                }
+            }
+        }
+
+        .card-contact {
+            grid-column: 1 / 3;
+            grid-row: 8 / 9;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+            grid-row: 9 / 10;
+        }
+    }
+}
