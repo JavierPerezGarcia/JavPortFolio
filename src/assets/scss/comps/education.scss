@@ -4,8 +4,8 @@ body {
     #main {
         .card-education {
             @include m.sizing(100%, 100%);
-            grid-column: 1 / 3;
-            grid-row: 4 / 5;
+            grid-column: 1 / 2;
+            grid-row: 3 / 5;
 
 
             .education {

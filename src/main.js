@@ -1,16 +1,16 @@
 //Navbar elements
 
-const navAbout = document.querySelector(".nav-about");
+/* const navAbout = document.querySelector(".nav-about");
 const navEducation = document.querySelector(".nav-education");
 const navSkills = document.querySelector(".nav-skills");
 const navHobbies = document.querySelector(".nav-hobbies");
 const navProjects = document.querySelector(".nav-projects");
-const navContact = document.querySelector(".nav-contact");
+const navContact = document.querySelector(".nav-contact"); */
 
 //Reverse about photo
 
-/* const front = document.querySelector(".card-front");
-const back = document.querySelector(".card-back"); */
+//const front = document.querySelector(".card-front");
+//const back = document.querySelector(".card-back");
 
 //Cards elements
 
@@ -30,14 +30,14 @@ const github = document.querySelector(".github");
 
 //Click events
 
-/* front.addEventListener("click", rotate); */
+//front.addEventListener("click", rotate);
 
-navAbout.addEventListener("click", openCardAbout);
+/* navAbout.addEventListener("click", openCardAbout);
 navEducation.addEventListener("click", openCardEducation);
 navSkills.addEventListener("click", openCardSkills);
 navHobbies.addEventListener("click", openCardHobbies)
 navProjects.addEventListener("click", openCardProjects);
-navContact.addEventListener("click", openCardContact);
+navContact.addEventListener("click", openCardContact); */
 
 about.addEventListener("click", activeNavAbout);
 education.addEventListener("click", activeNavEducation);
@@ -51,7 +51,7 @@ linked.addEventListener("click", openCardContact);
 github.addEventListener("click", openCardContact);
 
 const cards = document.querySelectorAll('.card');
-const navs = document.querySelectorAll('.nav');
+/* const navs = document.querySelectorAll('.nav'); */
 
 cards.forEach(card => card.addEventListener('click', transition));
 
@@ -61,9 +61,9 @@ function transition() {
 
 //Function for rotate the about photo
 
-/* function rotate() {
-  this.classList.toggle('active2');
-} */
+//function rotate() {
+//this.classList.toggle('active2');
+//}
 
 //Functions for flip the cards
 
@@ -101,7 +101,7 @@ function openCardAbout() {
 function openCardEducation() {
   education.classList.toggle('active');
   navEducation.classList.toggle('active');
-  /* verifyActive(); */
+  //verifyActive();
 }
 
 function openCardSkills() {

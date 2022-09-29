@@ -4,7 +4,7 @@ body {
     #main {
         .card-contact {
             @include m.sizing(100%, 100%);
-            grid-column: 5 / 6;
+            grid-column: 4 / 5;
             grid-row: 3 / 5;
 
             .contact {

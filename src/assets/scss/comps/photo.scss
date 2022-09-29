@@ -1,0 +1,30 @@
+@use '../mixins/mixins.scss' as m;
+
+body {
+    #main {
+        .card-photo {
+            @include m.sizing(100%, 100%);
+            grid-column: 2 / 3;
+            grid-row: 3 / 5;
+            border-radius: 0.4rem;
+
+            .photo {
+                @include m.sizing(100%, 100%);
+                @include m.flexWithDirection(flex, center, center, column);
+                background-color: rgb(59, 41, 14); //#5c4624;
+            }
+
+            .reverse-photo {
+                @include m.flexWithoutDirection(flex, center, center);
+
+                .bg-photo {
+                    @include m.sizing(96%, 96%);
+                    background-image: url(./img/fotoCVnueva.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

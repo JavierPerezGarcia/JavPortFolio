@@ -4,7 +4,7 @@ body {
     #main {
         .card-projects {
             @include m.sizing(100%, 100%);
-            grid-column: 3 / 5;
+            grid-column: 3 / 4;
             grid-row: 4 / 5;
 
             .projects {
