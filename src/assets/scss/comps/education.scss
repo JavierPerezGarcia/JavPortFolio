@@ -13,13 +13,16 @@ body {
                 @include m.sizing(100%, 100%);
                 background-color: #FF9B2F;
 
-                h1 {
-                    display: none;
-                }
-
                 .icon-education {
                     @include m.sizing(16rem, 11rem);
                     transition: transform 0.5s ease-in-out;
+                }
+
+                .title-education {
+                    font-size: 1.8rem;
+                    transition: transform 0.5s ease-in-out;
+                    margin: 0.5rem 0rem 0rem 0rem;
+                    color: #051A4C;
                 }
 
                 .clicking2 {
@@ -28,7 +31,11 @@ body {
             }
 
             &:hover .icon-education {
-                transform: scale(1.2);
+                transform: scale(1.1);
+            }
+
+            &:hover .title-education {
+                transform: scale(1.1) translate(0rem, 0.5rem);
             }
         }
 
@@ -40,8 +47,8 @@ body {
             box-sizing: border-box;
 
             .content-education {
-                @include m.sizing(70%, 100%);
-                @include m.flexWithDirection(flex, space-evenly, none, column);
+                @include m.sizing(100%, 100%);
+                @include m.flexWithDirection(flex, space-evenly, center, column);
                 margin: 0rem 0rem 0rem 1.5rem;
 
                 h1 {

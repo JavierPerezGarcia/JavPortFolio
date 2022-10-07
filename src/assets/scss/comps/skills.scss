@@ -8,22 +8,28 @@ body {
             grid-row: 2 / 3;
 
             .skills {
-                @include m.flexWithDirection(flex, center, center, column);
+                @include m.flexWithDirection(flex, center, center, row);
                 @include m.sizing(100%, 100%);
                 background-color: #051A4C;
 
-                h1 {
-                    display: none;
+                .icon-skills {
+                    @include m.sizing(8.5rem, 8.5rem);
+                    transition: transform 0.5s ease-in-out;
                 }
 
-                .icon-skills {
-                    @include m.sizing(9.5rem, 9.5rem);
+                .title-skills {
+                    margin: 0rem 0rem 0rem 1.5rem;
+                    font-size: 1.8rem;
                     transition: transform 0.5s ease-in-out;
                 }
             }
 
             &:hover .icon-skills {
-                transform: scale(1.2);
+                transform: scale(1.1) translate(-0.5rem, 0rem);
+            }
+
+            &:hover .title-skills {
+                transform: scale(1.1) translate(0.5rem, 0rem);
             }
         }
 

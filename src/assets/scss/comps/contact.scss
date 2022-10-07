@@ -12,18 +12,25 @@ body {
                 @include m.sizing(100%, 100%);
                 background-color: #FF9B2F;
 
-                h1 {
-                    display: none;
+                .icon-contact {
+                    @include m.sizing(14rem, 11rem);
+                    transition: transform 0.5s ease-in-out;
                 }
 
-                .icon-contact {
-                    @include m.sizing(16rem, 16rem);
+                .title-contact {
+                    font-size: 1.8rem;
+                    margin: 0.5rem 0rem 0rem 0rem;
                     transition: transform 0.5s ease-in-out;
+                    color: #051A4C;
                 }
             }
 
             &:hover .icon-contact {
-                transform: scale(1.2);
+                transform: scale(1.1);
+            }
+
+            &:hover .title-contact {
+                transform: scale(1.1) translate(0rem, 0.3rem);
             }
         }
 

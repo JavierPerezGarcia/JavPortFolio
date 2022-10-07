@@ -11,7 +11,15 @@ body {
             .photo {
                 @include m.sizing(100%, 100%);
                 @include m.flexWithDirection(flex, center, center, column);
-                background-color: rgb(59, 41, 14); //#5c4624;
+                background-color: rgb(59, 41, 14); //rgb(59, 41, 14); //#BFA174; //#5c4624;
+
+                .icon-photo {
+                    @include m.sizing(12rem, 11rem);
+                }
+
+                .title-photo {
+                    margin: 0.3rem 0rem 0rem 0rem;
+                }
             }
 
             .reverse-photo {

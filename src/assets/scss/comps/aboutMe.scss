@@ -12,18 +12,24 @@ body {
                 @include m.flexWithDirection(flex, center, center, column);
                 background-color: #051A4C;
 
-                h1 {
-                    display: none;
+                .icon-about {
+                    @include m.sizing(19rem, 19rem);
+                    transition: transform 0.5s ease-in-out;
                 }
 
-                .icon-about {
-                    @include m.sizing(21rem, 21rem);
+                .title-about {
+                    margin: 0.5rem 0rem 0rem 0rem;
+                    font-size: 1.9rem;
                     transition: transform 0.5s ease-in-out;
                 }
             }
 
             &:hover .icon-about {
-                transform: scale(1.2);
+                transform: scale(1.1);
+            }
+
+            &:hover .title-about {
+                transform: scale(1.1) translate(0rem, 0.5rem);
             }
         }
 
@@ -48,8 +54,8 @@ body {
 
                     p {
                         color: #051A4C;
-                        @include m.fontProps(0.9rem, 1.6rem, justify, 500);
-                        @include m.spaces(0.5rem 0rem 0rem 0rem, 0rem 0.5rem);
+                        @include m.fontProps(0.9rem, 1.6rem, center, 500);
+                        @include m.spaces(0.5rem 0rem 0rem 0rem, 0rem);
                     }
                 }
             }

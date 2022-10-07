@@ -12,13 +12,16 @@ body {
                 @include m.sizing(100%, 100%);
                 background-color: #FF9B2F;
 
-                h1 {
-                    display: none;
+                .icon-hobbies {
+                    @include m.sizing(14rem, 13rem);
+                    transition: transform 0.5s ease-in-out;
                 }
 
-                .icon-hobbies {
-                    @include m.sizing(15rem, 15rem);
+                .title-hobbies {
                     transition: transform 0.5s ease-in-out;
+                    margin: 0.3rem 0rem 0rem 0rem;
+                    font-size: 1.8rem;
+                    color: #051A4C;
                 }
 
                 .clicking {
@@ -48,7 +51,11 @@ body {
             }
 
             &:hover .icon-hobbies {
-                transform: scale(1.2);
+                transform: scale(1.1);
+            }
+
+            &:hover .title-hobbies {
+                transform: scale(1.1) translate(0rem, 0.5rem);
             }
 
             &:hover {
@@ -84,7 +91,7 @@ body {
 
                     p {
                         color: #FF9B2F; //#D67813;
-                        @include m.fontProps(1rem, 1.7rem, justify, 600);
+                        @include m.fontProps(1rem, 1.7rem, center, 600);
                         @include m.spaces(0, 0rem 0rem);
                     }
 
