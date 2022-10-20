@@ -21,6 +21,7 @@ const hobbies = document.querySelector(".card-hobbies");
 const projects = document.querySelector(".card-projects");
 const contact = document.querySelector(".card-contact");
 const logo = document.querySelector(".card-logo");
+const mode = document.querySelector(".card-color-mode");
 
 //a tags elements
 
@@ -39,24 +40,30 @@ navHobbies.addEventListener("click", openCardHobbies)
 navProjects.addEventListener("click", openCardProjects);
 navContact.addEventListener("click", openCardContact); */
 
-about.addEventListener("click", activeNavAbout);
+/* about.addEventListener("click", activeNavAbout);
 education.addEventListener("click", activeNavEducation);
 skills.addEventListener("click", activeNavSkills);
 hobbies.addEventListener("click", activeNavHobbies);
 projects.addEventListener("click", activeNavProjects);
-contact.addEventListener("click", activeNavContact);
+contact.addEventListener("click", activeNavContact); */
 
 mail.addEventListener("click", openCardContact);
 linked.addEventListener("click", openCardContact);
 github.addEventListener("click", openCardContact);
 
 const cards = document.querySelectorAll('.card');
+const horCards = document.querySelectorAll('.card-hor');
 /* const navs = document.querySelectorAll('.nav'); */
 
 cards.forEach(card => card.addEventListener('click', transition));
+horCards.forEach(c => c.addEventListener('click', horTransition));
 
 function transition() {
   this.classList.toggle('active');
+}
+
+function horTransition() {
+  this.classList.toggle('active-horizontal');
 }
 
 //Function for rotate the about photo
@@ -127,3 +134,7 @@ function openCardContact() {
 function openCardLogo() {
   logo.classList.toggle('active');
 }
+
+/* function openCardMode() {
+  mode.classList.toggle('active-horizontal');
+} */

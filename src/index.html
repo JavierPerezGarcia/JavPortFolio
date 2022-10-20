@@ -1,122 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="./svg/JavLogoOrange650x400.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de presentación de Javier Pérez García, Desarrollador FrontEnd y Multiplataforma.">
-    <title>Javier Pérez García - Desarrollador Web y Multiplataforma</title>
-    <link rel="stylesheet" href="./index.scss">
-    <!-- <link rel="stylesheet" href="./assets/scss/queries/laptop.scss" media="(max-width: 1441px)">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="./svg/JavLogoOrange650x400.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de presentación de Javier Pérez García, Desarrollador FrontEnd y Multiplataforma.">
+  <title>Javier Pérez García - Desarrollador Web y Multiplataforma</title>
+  <link rel="stylesheet" href="./index.scss">
+  <!-- <link rel="stylesheet" href="./assets/scss/queries/laptop.scss" media="(max-width: 1441px)">
     <link rel="stylesheet" href="./assets/scss/queries/rarescreendesktop.scss" media="(max-width: 1151px)">
     <link rel="stylesheet" href="./assets/scss/queries/tablet.scss" media="(max-width: 769px)">
     <link rel="stylesheet" href="./assets/scss/queries/littletablet.scss" media="(max-width: 615px)"> -->
-    <meta property="og:title" content="Javiperez.dev - Desarrollador Web y Multiplataforma">
-    <meta property="og:image" content="https://javiperez.dev/JavLogo650x400.5fb04ce4.png">
-    <meta property="og:type" content="article">
-    <meta property="og:description" content="Buenas a todos, me llamo Javi. Soy Desarollador Web y Multiplataforma, resido en Santa Cruz de Tenerife(Canarias, España) y les doy la bienvenida a mi rinconcito personal donde podrán conocerme un poco más y ver los proyectos que he realizado.">
-  </head>
-  <body>
-    <div id="main">
-      <div class="card-hobbies card flip flip-vertical">
-        <div class="hobbies card-side front">
-          <img class="icon-hobbies" src="./svg/Hobbies.svg" alt="Logo de hobbies de Javier Pérez García">
-          <div class="clicking"><!-- <p>HAZ CLICK</p> --><span class="iconify" data-icon="icon-park-solid:click"></span><!-- <span class="iconify" data-icon="fluent:cursor-click-24-filled"></span> --></div>
-          <h1 class="title-hobbies">AFICIONES</h1>
+  <meta property="og:title" content="Javiperez.dev - Desarrollador Web y Multiplataforma">
+  <meta property="og:image" content="https://javiperez.dev/JavLogo650x400.5fb04ce4.png">
+  <meta property="og:type" content="article">
+  <meta property="og:description"
+    content="Buenas a todos, me llamo Javi. Soy Desarollador Web y Multiplataforma, resido en Santa Cruz de Tenerife(Canarias, España) y les doy la bienvenida a mi rinconcito personal donde podrán conocerme un poco más y ver los proyectos que he realizado.">
+</head>
+
+<body>
+  <div id="main">
+    <div class="card-hobbies card-hor flip flip-horizontal">
+      <div class="hobbies card-side front">
+        <img class="icon-hobbies" src="./svg/Hobbies.svg" alt="Logo de hobbies de Javier Pérez García">
+        <div class="clicking">
+          <!-- <p>HAZ CLICK</p> --><span class="iconify" data-icon="icon-park-solid:click"></span>
+          <!-- <span class="iconify" data-icon="fluent:cursor-click-24-filled"></span> -->
         </div>
-        <div class="reverse-hobbies card-side back">
-          <div class="content-hobbies">
-            <h1>AFICIONES</h1>
-            <p class="text-hobbies">Me gusta salir a hacer vida “outside”, disfruto conectando con las personas en un entorno físico además de lo virtual y entre mis hobbies destaca el patinaje, el baloncesto y la música.</p>
-            <div class="icons-hobbies">
-              <div class="first-icon-skate"><span class="iconify" data-icon="ic:twotone-skateboarding"></span><p class="mobile-text">SKATE</p><p class="tablet-text">SKATEBOARDING</p></div>
-              <div class="second-icon-basket"><span class="iconify" data-icon="iconoir:basketball-alt"></span><p class="mobile-text">BASKET</p><p class="tablet-text">BALONCESTO</p></div>
-              <div class="third-icon-music"><span class="iconify" data-icon="icon-park-solid:headphone-sound"></span><p class="mobile-text">MÚSICA</p><p class="tablet-text">MÚSICA</p></div>
+        <h1 class="title-hobbies">AFICIONES</h1>
+      </div>
+      <div class="reverse-hobbies card-side back">
+        <div class="content-hobbies">
+          <h1>AFICIONES</h1>
+          <p class="text-hobbies">Me gusta salir a hacer vida “outside”, disfruto conectando con las personas en un
+            entorno físico además de lo virtual y entre mis hobbies destaca el patinaje, el baloncesto y la música.</p>
+          <div class="icons-hobbies">
+            <div class="first-icon-skate"><span class="iconify" data-icon="ic:twotone-skateboarding"></span>
+              <p class="mobile-text">SKATE</p>
+              <p class="tablet-text">SKATEBOARDING</p>
             </div>
-          </div>
-          <div class="video-hobbies">
-            <video src="./video/javskate.mp4" autoplay loop muted></video>
-            <div class="title-skate">
-              <h1 class="text-skate">SKATE</h1>
+            <div class="second-icon-basket"><span class="iconify" data-icon="iconoir:basketball-alt"></span>
+              <p class="mobile-text">BASKET</p>
+              <p class="tablet-text">BALONCESTO</p>
             </div>
-          </div>
-          <div class="video-hobbies2">
-            <video src="./video/javbasket.mp4" autoplay loop muted></video>
-            <div class="title-basket">
-              <h1 class="text-basket">BASKET</h1>
-            </div>
-          </div>
-          <div class="video-hobbies3">
-            <video src="./video/cruzzi1.mp4" autoplay loop muted></video>
-            <div class="title-music">
-              <h1 class="text-music">MÚSICA</h1>
+            <div class="third-icon-music"><span class="iconify" data-icon="icon-park-solid:headphone-sound"></span>
+              <p class="mobile-text">MÚSICA</p>
+              <p class="tablet-text">MÚSICA</p>
             </div>
           </div>
         </div>
+        <div class="video-hobbies">
+          <video src="./video/javskate.mp4" autoplay loop muted></video>
+          <div class="title-skate">
+            <h1 class="text-skate">SKATE</h1>
+          </div>
+        </div>
+        <div class="video-hobbies2">
+          <video src="./video/javbasket.mp4" autoplay loop muted></video>
+          <div class="title-basket">
+            <h1 class="text-basket">BASKET</h1>
+          </div>
+        </div>
+        <div class="video-hobbies3">
+          <video src="./video/cruzzi1.mp4" autoplay loop muted></video>
+          <div class="title-music">
+            <h1 class="text-music">MÚSICA</h1>
+          </div>
+        </div>
+      </div>
     </div>
-      <div class="card-about-me card flip flip-vertical">
-        <div class="about-me card-side front">
-          <img class="icon-about" src="./svg/AboutMe4.svg" alt="Logo de Sobre Mi de Javier Pérez García">
-          <h1 class="title-about">SOBRE MÍ</h1>
-        </div>
-        <div class="reverse-about-me card-side back">
-          <div class="content-about">
-            <h1>SOBRE MÍ</h1>
-            <div class="text-about">
-              <p>Soy un joven programador de 26 años residente en Santa Cruz de Tenerife, lugar donde nací y crecí.</p>
-              <p class="second-about-part">No tenía del todo claro que quería hacer profesionalmente, comencé estudiando aparejadores
-                por seguir la estela familiar, pero una serie de factores dieron pie a una nueva visión de mi mismo en la que me introducía en la programación,
-                un mundo diferente pero que pintaba apasionante del cual me he ido enamorando poco a poco.</p>
-                <p class="last-about-part">Es el sector al que me quiero dedicar durante muchos años, principalmente al lado Frontend en el desarrollo web.</p>
-              <!-- <p>Soy un joven de 26 años y vivo actualmente en Santa Cruz de Tenerife.</p>
+    <div class="card-about-me card flip flip-vertical">
+      <div class="about-me card-side front">
+        <img class="icon-about" src="./svg/AboutMe4.svg" alt="Logo de Sobre Mi de Javier Pérez García">
+        <h1 class="title-about">SOBRE MÍ</h1>
+      </div>
+      <div class="reverse-about-me card-side back">
+        <div class="content-about">
+          <h1>SOBRE MÍ</h1>
+          <div class="text-about">
+            <p>Soy un joven programador de 26 años residente en Santa Cruz de Tenerife, lugar donde nací y crecí.</p>
+            <p class="second-about-part">No tenía del todo claro que quería hacer profesionalmente, comencé estudiando
+              aparejadores
+              por seguir la estela familiar, pero una serie de factores dieron pie a una nueva visión de mi mismo en la
+              que me introducía en la programación,
+              un mundo diferente pero que pintaba apasionante del cual me he ido enamorando poco a poco.</p>
+            <p class="last-about-part">Es el sector al que me quiero dedicar durante muchos años, principalmente al lado
+              Frontend en el desarrollo web.</p>
+            <!-- <p>Soy un joven de 26 años y vivo actualmente en Santa Cruz de Tenerife.</p>
               <p>Nunca tuve claro que quería hacer con mi vida, pero siempre tuve una vena creativa. Estudié informática y poco a poco me fui enamorando de ella. A día de hoy sé que me quiero dedicar al front dentro del sector tecnológico.</p> -->
-            </div>
-          </div>
-          <div class="photo-about">
-            <div class="card-front">
-              <div class="acces-photo">
-                <p class="text-one"><span class="iconify" data-icon="fluent:cursor-hover-16-filled"></span>PONTE ENCIMA</p>
-              </div>
-            </div>
-            <div class="card-back">
-              <div class="acces-photo2">
-                <p class="text-two"><span class="iconify" data-icon="fluent-emoji-high-contrast:glowing-star"></span><!-- <span class="iconify" data-icon="wi:stars"></span> -->VAYA QUE SORPRESA<!-- <span class="iconify" data-icon="wi:stars"></span> --></p>
-              </div>
-            </div>
-            <!-- <img src="./img/javftv3.jpg" alt=""> -->
           </div>
         </div>
-      </div>
-      <div class="card-skills card flip flip-vertical">
-        <div class="skills card-side front">
-          <img class="icon-skills" src="./svg/Skills.svg" alt="Logo de habilidades de Javier Pérez García">
-          <h1 class="title-skills">HABILIDADES</h1>
-        </div>
-        <div class="reverse-skills card-side back">
-          <h1>HABILIDADES</h1>
-          <div class="all-skills">
-            <p class="html"><span class="iconify" data-icon="icomoon-free:html-five"></span>HTML</p>
-            <p class="scss"><span class="iconify" data-icon="cib:sass"></span>SASS</p>
-            <p class="javascript"><span class="iconify" data-icon="simple-icons:javascript"></span>Javascript</p>
-            <p class="bbdd"><span class="iconify" data-icon="fa:database"></span>Databases</p>
-            <p class="vuejs"><span class="iconify" data-icon="cib:vue-js"></span>Vuejs</p>
-            <p class="figma"><span class="iconify" data-icon="file-icons:figma"></span>Figma</p>
-            <p class="terminal"><span class="iconify terminal" data-icon="bxs:terminal"></span>Terminal</p>
-            <p class="git"><span class="iconify" data-icon="bi:git"></span>Git / Github</p>
+        <div class="photo-about">
+          <div class="card-front">
+            <div class="acces-photo">
+              <p class="text-one"><span class="iconify" data-icon="fluent:cursor-hover-16-filled"></span>PONTE ENCIMA
+              </p>
+            </div>
           </div>
+          <div class="card-back">
+            <div class="acces-photo2">
+              <p class="text-two"><span class="iconify" data-icon="fluent-emoji-high-contrast:glowing-star"></span>
+                <!-- <span class="iconify" data-icon="wi:stars"></span> -->VAYA QUE SORPRESA
+                <!-- <span class="iconify" data-icon="wi:stars"></span> -->
+              </p>
+            </div>
+          </div>
+          <!-- <img src="./img/javftv3.jpg" alt=""> -->
         </div>
       </div>
-      <div class="card-logo card flip flip-vertical">
-        <div class="logo card-side front">
-          <div class="mask-logo"></div>
-        </div>
-        <!-- <img class="icon-jav" src="./svg/JavLogoBlue650x400.svg" alt="Logo de Javier Pérez García"> -->
-        <div class="reverse-logo card-side back">
-          <div class="name"><p>JAVIER PÉREZ GARCÍA</p></div>
+    </div>
+    <div class="card-skills card flip flip-vertical">
+      <div class="skills card-side front">
+        <img class="icon-skills" src="./svg/Skills.svg" alt="Logo de habilidades de Javier Pérez García">
+        <h1 class="title-skills">HABILIDADES</h1>
+      </div>
+      <div class="reverse-skills card-side back">
+        <h1>HABILIDADES</h1>
+        <div class="all-skills">
+          <p class="html"><span class="iconify" data-icon="icomoon-free:html-five"></span>HTML</p>
+          <p class="scss"><span class="iconify" data-icon="cib:sass"></span>SASS</p>
+          <p class="javascript"><span class="iconify" data-icon="simple-icons:javascript"></span>Javascript</p>
+          <p class="bbdd"><span class="iconify" data-icon="fa:database"></span>Databases</p>
+          <p class="vuejs"><span class="iconify" data-icon="cib:vue-js"></span>Vuejs</p>
+          <p class="figma"><span class="iconify" data-icon="file-icons:figma"></span>Figma</p>
+          <p class="terminal"><span class="iconify terminal" data-icon="bxs:terminal"></span>Terminal</p>
+          <p class="git"><span class="iconify" data-icon="bi:git"></span>Git / Github</p>
         </div>
       </div>
-      <div class="click-me"><p><span class="iconify touch" data-icon="carbon:touch-1-filled"></span>PULSA EN LAS TARJETAS</p></div>
-      <!-- <div class="navbar">
+    </div>
+    <div class="card-logo card flip flip-vertical">
+      <div class="logo card-side front">
+        <div class="mask-logo"></div>
+      </div>
+      <!-- <img class="icon-jav" src="./svg/JavLogoBlue650x400.svg" alt="Logo de Javier Pérez García"> -->
+      <div class="reverse-logo card-side back">
+        <div class="name">
+          <p>JAVIER PÉREZ GARCÍA</p>
+        </div>
+      </div>
+    </div>
+    <div class="click-me">
+      <p><span class="iconify touch" data-icon="carbon:touch-1-filled"></span>PULSA EN LAS TARJETAS</p>
+    </div>
+    <!-- <div class="navbar">
         <div class="nav-hobbies nav">
           <h1>AFICIONES</h1>
         </div>
@@ -136,69 +164,104 @@
           <h1>SOBRE MÍ</h1>
         </div>
       </div> -->
-      <div class="card-contact card flip flip-vertical">
-        <div class="contact card-side front">
-          <img class="icon-contact" src="./svg/Contact.svg" alt="Logo de contacto de Javier Pérez García">
-          <h1 class="title-contact">CONTACTO</h1>
-        </div>
-        <div class="reverse-contact card-side back">
-          <div><h1>CONTACTO</h1></div>
-          <div class="content-contact">
-            <p><span class="iconify" data-icon="carbon:phone"></span>(+34) 647 868 172</p>
-            <a class="email" target="_blank" href="mailto:pitayapp.eoi@gmail.com"><span class="iconify" data-icon="ci:mail"></span>javipe96@gmail.com</a>
-            <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/javperdev/"><span class="iconify" data-icon="bi:linkedin"></span>Javier Pérez García</a>
-            <a class="github" target="_blank" href="https://github.com/JavierPerezGarcia"><span class="iconify" data-icon="icomoon-free:github"></span>JavPerDev</a>
-          </div>
-        </div>
+    <div class="card-contact card-hor flip flip-horizontal">
+      <div class="contact card-side front">
+        <img class="icon-contact" src="./svg/Contact.svg" alt="Logo de contacto de Javier Pérez García">
+        <h1 class="title-contact">CONTACTO</h1>
       </div>
-      <div class="card-education card flip flip-vertical">
-        <div class="education card-side front">
-          <div class="clicking2"><!-- <p>HAZ CLICK</p> --><span class="iconify click" data-icon="icon-park-solid:click"></span><span class="iconify touch" data-icon="carbon:touch-1-filled"></span><!-- <span class="iconify" data-icon="fluent:cursor-click-24-filled"></span> --></div>
-          <img class="icon-education" src="./svg/EducationLeft.svg" alt="Logo de estudios de Javier Pérez García">
-          <h1 class="title-education">FORMACIÓN</h1>
+      <div class="reverse-contact card-side back">
+        <div>
+          <h1>CONTACTO</h1>
         </div>
-        <div class="reverse-education card-side back">
-          <div class="content-education">
-            <h1>FORMACIÓN</h1>
-            <p><span class="iconify" data-icon="ic:round-desktop-windows"></span>Ciclo en Desarrollo de Aplicaciones Web (CIFP César Manrique).</p>
-            <p><span class="iconify multiplatform" data-icon="icomoon-free:mobile2"></span>Ciclo en Desarrollo de Aplicaciones Multiplataforma (CIFP César Manrique).</p>
-            <p><span class="iconify" data-icon="la:laptop-code"></span> Cursos de FrontEnd y FullStack (Escuela de Organización Industrial).</p>
-            <p><span class="iconify" data-icon="bi:person-workspace"></span>Prácticas externas en Centro de Informática y Análisis de Canarias S.L.</p>
-          </div>
-          <!-- <div class="photos-education"></div> -->
+        <div class="content-contact">
+          <p><span class="iconify" data-icon="carbon:phone"></span>(+34) 647 868 172</p>
+          <a class="email" target="_blank" href="mailto:pitayapp.eoi@gmail.com"><span class="iconify"
+              data-icon="ci:mail"></span>javipe96@gmail.com</a>
+          <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/javperdev/"><span class="iconify"
+              data-icon="bi:linkedin"></span>Javier Pérez García</a>
+          <a class="github" target="_blank" href="https://github.com/JavierPerezGarcia"><span class="iconify"
+              data-icon="icomoon-free:github"></span>JavPerDev</a>
         </div>
-      </div>
-      <div class="card-photo card flip flip-vertical">
-        <div class="photo card-side front">
-          <img class="icon-photo" src="./svg/photo.svg" alt="Logo de cámara de fotos de Javier Pérez García">
-          <h1 class="title-photo">FOTO</h1>
-        </div>
-        <div class="reverse-photo card-side back">
-          <div class="bg-photo"></div>
-        </div>
-      </div>
-      <!-- <div class="photo"></div> -->
-      <div class="card-projects card flip flip-vertical">
-        <div class="projects card-side front">
-          <img class="icon-projects" src="./svg/Settings.svg" alt="Logo de configuración de Javier Pérez García">
-          <h1 class="title-projects">PROYECTOS</h1>
-        </div>
-        <div class="reverse-projects card-side back">
-          <h1>PROYECTOS</h1>
-          <div class="content-projects">
-            <a class="jav" target="_blank" href="https://javiperez.dev/"><img src="./img/JavLogo650x400.png" alt="">javiperez.dev</a>
-            <a class="pitayapp" target="_blank" href="https://pitayapp.com/"><img src="./svg/pitayappLogo.svg" alt="">pitayapp.com</a>
-            <p class="future"><span class="iconify" data-icon="wpf:future"></span>Más projectos pronto</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer"><p class="part-one">HECHO POR JAV &copy 2022</p><p class="part-two">- DERECHOS RESERVADOS</p></div>
-      <div class="card-footer-sign card flip flip-vertical">
-        <div class="sign card-side front"><p>DERECHOS<span class="iconify" data-icon="fluent:signature-20-filled"></span></p><!-- <span class="iconify" data-icon="fluent:signature-20-regular"></span> --><!-- <span class="iconify" data-icon="fluent:signature-28-filled"></span> --></div>
-        <div class="reverse-sign card-side back"><p>HECHO POR JAV &copy 2022</p></div>
       </div>
     </div>
-    <script type="module" src="./main.js"></script>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  </body>
+    <div class="card-education card-hor flip flip-horizontal">
+      <div class="education card-side front">
+        <div class="clicking2">
+          <!-- <p>HAZ CLICK</p> --><span class="iconify click" data-icon="icon-park-solid:click"></span><span
+            class="iconify touch" data-icon="carbon:touch-1-filled"></span>
+          <!-- <span class="iconify" data-icon="fluent:cursor-click-24-filled"></span> -->
+        </div>
+        <img class="icon-education" src="./svg/EducationLeft.svg" alt="Logo de estudios de Javier Pérez García">
+        <h1 class="title-education">FORMACIÓN</h1>
+      </div>
+      <div class="reverse-education card-side back">
+        <div class="content-education">
+          <h1>FORMACIÓN</h1>
+          <p><span class="iconify" data-icon="ic:round-desktop-windows"></span>Ciclo en Desarrollo de Aplicaciones Web
+            (CIFP César Manrique).</p>
+          <p><span class="iconify multiplatform" data-icon="icomoon-free:mobile2"></span>Ciclo en Desarrollo de
+            Aplicaciones Multiplataforma (CIFP César Manrique).</p>
+          <p><span class="iconify" data-icon="la:laptop-code"></span> Cursos de FrontEnd y FullStack (Escuela de
+            Organización Industrial).</p>
+          <p><span class="iconify" data-icon="bi:person-workspace"></span>Prácticas externas en Centro de Informática y
+            Análisis de Canarias S.L.</p>
+        </div>
+        <!-- <div class="photos-education"></div> -->
+      </div>
+    </div>
+    <div class="card-photo card flip flip-vertical">
+      <div class="photo card-side front">
+        <img class="icon-photo" src="./svg/photo10.svg" alt="Logo de cámara de fotos de Javier Pérez García">
+        <h1 class="title-photo">FOTO</h1>
+      </div>
+      <div class="reverse-photo card-side back">
+        <div class="bg-photo"></div>
+      </div>
+    </div>
+    <!-- <div class="photo"></div> -->
+    <div class="card-projects card flip flip-vertical">
+      <div class="projects card-side front">
+        <img class="icon-projects" src="./svg/Settings.svg" alt="Logo de configuración de Javier Pérez García">
+        <h1 class="title-projects">PROYECTOS</h1>
+      </div>
+      <div class="reverse-projects card-side back">
+        <h1>PROYECTOS</h1>
+        <div class="content-projects">
+          <a class="jav" target="_blank" href="https://javiperez.dev/"><img src="./img/JavLogo650x400.png"
+              alt="">javiperez.dev</a>
+          <a class="pitayapp" target="_blank" href="https://pitayapp.com/"><img src="./svg/pitayappLogo.svg"
+              alt="">pitayapp.com</a>
+          <p class="future"><span class="iconify" data-icon="wpf:future"></span>Más projectos pronto</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="part-one">HECHO POR JAV &copy 2022</p>
+      <p class="part-two">- DERECHOS RESERVADOS</p>
+    </div>
+    <div class="card-footer-sign card flip flip-vertical">
+      <div class="sign card-side front">
+        <p>DERECHOS <img class="icon-sign" src="./svg/sign2.svg" alt="">
+          <!-- <span class="iconify" data-icon="fluent:signature-20-filled"></span> -->
+        </p>
+        <!-- <span class="iconify" data-icon="fluent:signature-20-regular"></span> -->
+        <!-- <span class="iconify" data-icon="fluent:signature-28-filled"></span> -->
+      </div>
+      <div class="reverse-sign card-side back">
+        <p>HECHO POR JAV &copy 2022</p>
+      </div>
+    </div>
+    <!-- <div class="card-color-mode card-hor flip flip-horizontal">
+      <div class="color-mode card-side front">
+        <p>CLARO<span class="iconify" data-icon="ic:round-light-mode"></span></p>
+      </div>
+      <div class="reverse-color-mode card-side back">
+        <p>OSCURO<span class="iconify" data-icon="ic:sharp-dark-mode"></span></p>
+      </div>
+    </div> -->
+  </div>
+  <script type="module" src="./main.js"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</body>
+
 </html>

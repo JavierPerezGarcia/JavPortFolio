@@ -39,6 +39,12 @@
     }
 }
 
+.flip-horizontal {
+    .back {
+        transform: rotateY(-180deg);
+    }
+}
+
 .active {
     .front {
         transform: rotateX(180deg);
@@ -46,5 +52,26 @@
 
     .back {
         transform: rotateX(0deg);
+    }
+}
+
+.active-horizontal {
+    .front {
+        transform: rotateX(180deg);
+    }
+
+    .back {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+.active-horizontal {
+    .front {
+        transform: rotateY(180deg);
+    }
+
+    .back {
+        transform: rotateY(0deg);
     }
 }

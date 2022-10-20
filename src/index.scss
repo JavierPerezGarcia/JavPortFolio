@@ -9,6 +9,8 @@
 @forward '../src/assets/scss/comps/photo.scss';
 /* @forward '../src/assets/scss/comps/navbar.scss'; */
 @forward '../src/assets/scss/comps/logo.scss';
+@forward '../src/assets/scss/comps/sign.scss';
+/* @forward '../src/assets/scss/comps/lightDarkMode.scss'; */
 @use '../src/assets/scss/mixins/mixins.scss' as m;
 
 body {
@@ -35,7 +37,7 @@ body {
             display: none;
         }
 
-        .card-footer-sign {
+        /* .card-footer-sign {
             display: grid;
             @include m.sizing(100%, 100%);
             grid-column: 3 / 4;
@@ -97,7 +99,7 @@ body {
                     }
                 }
             }
-        }
+        } */
     }
 }
 

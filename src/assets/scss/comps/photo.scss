@@ -11,10 +11,12 @@ body {
             .photo {
                 @include m.sizing(100%, 100%);
                 @include m.flexWithDirection(flex, center, center, column);
-                background-color: rgb(59, 41, 14); //rgb(59, 41, 14); //#BFA174; //#5c4624;
+                background-color:
+                    /* #40260B; */
+                    rgb(59, 41, 14); //rgb(59, 41, 14); //#BFA174; //#5c4624;
 
                 .icon-photo {
-                    @include m.sizing(12rem, 11rem);
+                    @include m.sizing(10rem, 9rem);
                 }
 
                 .title-photo {
